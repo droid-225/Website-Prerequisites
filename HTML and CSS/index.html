@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <link rel="icon" type="image/gif" href="images/autismguy.gif"> <!--link tag specifies relationship between this document and an external source; rel: relationship attribute-->
         <title>My First Website</title>
@@ -171,5 +171,28 @@
                 <td>10-6</td>
             </tr>
         </table>
+
+        <br>
+        <a href="lyrics.html">
+        <button style="font: size 25px; background-color: red; color:whitesmoke; border-radius:25px;">
+            Click ME!
+        </button>
+        </a>
+
+        <br><br>
+        <button onClick="doSomething()" style="font: size 25px; background-color: red; color:whitesmoke; border-radius:25px;">
+            Do Something!
+        </button>
+        
+        <p id="greeting">Hello!</p>
+
+        <script>
+            function doSomething() {
+                if (document.getElementById("greeting").innerHTML == "Hello!")
+                    document.getElementById("greeting").innerHTML = "Goodbye!";
+                else
+                    document.getElementById("greeting").innerHTML = "Hello!";
+            }
+        </script>
     </body>
 </html>
