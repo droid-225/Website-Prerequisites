@@ -4,5 +4,3 @@ Following these tutorials in order:
 3. React: https://youtu.be/CgkZ7MvWUAA?si=njMsNYiP9VN-A8xx
 4. Next.js: https://youtu.be/k7o9R6eaSes?si=d2P5L0LVFu6gYRU4
 5. Tailwind CSS: https://youtu.be/GcX4iEhDgM8?si=B30heB3PlHqWAkAP
-
-Currently I am on the first tutorial learning HTML and CSS.
