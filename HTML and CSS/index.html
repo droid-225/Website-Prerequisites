@@ -93,7 +93,7 @@
         <p>This is <sub>subscript</sub> text</p>
         <p>This is <sup>superscript</sup> text</p>
         <p>This is <tt>monospaced</tt> text</p>
-        <p>This is <mark style="background-color: aqua;">makred</mark> text</p>
+        <p>This is <mark style="background-color: aqua;">marked</mark> text</p>
     
         <br>
         <!--<span> is an inline container to group elements for styling purposes-->
@@ -194,5 +194,54 @@
                     document.getElementById("greeting").innerHTML = "Hello!";
             }
         </script>
+
+        <h3>Form:</h3>
+        <!--form tag has the action attribute, where the from submission is sent to, and the method attribute, where POST is used for confidential info and GET is for insensitive data-->
+        <form action="index.php" method="POST" enctype="multipart/form-data"> <!--enctype attribute (encryption type) decides the type of encryption used when sending the submitted form-->
+            <label for="username">Username:</label> <!--label for input tag-->
+            <input type="text" id="username" minlength="6" maxlength="15" placeholder="Type Something!"> <!--input tag is self closing-->
+            <br>
+            <label for="password">Password:</label> <!--label for input tag-->
+            <input type="text" id="password" minlength="6" maxlength="15" placeholder="Type Something!" required> <!--input tag is self closing-->
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="something@mail.com">
+            <br>
+            <label for="phone">Phone No.:</label>
+            <input type="tel" id="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+            <br>
+            <label for="bday">Birthdate:</label>
+            <input type="date" id="bday">
+            <br>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" min="0" max="99" value="1">
+            <br>
+            <label for="title">Title:</label>
+            <input type="radio" id="Mr." value="Mr." name="title">
+            <label for="Mr.">Mr.</label>
+            <input type="radio" id="Ms." value="Ms." name="title">
+            <label for="Ms.">Ms.</label>
+            <input type="radio" id="PhD." value="PhD." name="title">
+            <label for="PhD.">PhD.</label>
+            <br>
+            <label for="payment">Payment</label>
+            <select id="payment"> <!--Dropdown menu-->
+                <option value="visa">visa</option>
+                <option value="mastercard">mastercard</option>
+                <option value="giftcard">giftcard</option>
+            </select>
+            <br>
+            <label for="subscribe">Subscribe:</label>
+            <input type="checkbox" id="subscribe">
+            <br>
+            <label for="comment">Comment:</label> <br>
+            <textarea id="comment" rows="3" cols="25"></textarea>
+            <br>
+            <label for="file">File:</label>
+            <input type="file" id="file" accept="image/png, image/jpeg">
+            <br>
+            <input type="reset">
+            <input type="submit">
+        </form>
     </body>
 </html>
