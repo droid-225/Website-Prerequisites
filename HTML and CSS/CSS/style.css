@@ -1,0 +1,33 @@
+body {
+    background-color: black;
+}
+
+h1 {
+    color:wheat
+}
+
+/*tags with different ids can be individually styled*/
+#p1 {
+    color:antiquewhite
+}
+
+#p2 {
+    color:blue
+}
+
+#p3 {
+    color:gold
+}
+
+#p4 {
+    color:forestgreen
+}
+
+/*tags can also be styled in groups called classes*/
+.odd {
+    font-style: italic;
+}
+
+.even {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}

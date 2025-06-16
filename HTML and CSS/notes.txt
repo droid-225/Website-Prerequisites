@@ -1,0 +1,1 @@
+You can create boiler plate html code automatically in VSCode by typing "! + tab"
