@@ -15,14 +15,22 @@ body {
 h1 {
     color:wheat;
     font-family: Verdana, Geneva, Tahoma, sans-serif, Arial, Helvetica;
+    border-style: inset;
+    border-width: 5px;
+    border-radius: 10px;
+    text-align: center;
 }
 
 /*tags with different ids can be individually styled*/
 #p1 {
     color:maroon;
+    border-bottom: 3px dotted peachpuff;
+    border-top: 10px dotted black;
 }
 
 #p2 {
+    border: 3px solid black;
+    border-radius: 5px;
     color:rgb(12, 252, 255);
 }
 
