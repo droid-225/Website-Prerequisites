@@ -1,5 +1,5 @@
 body {
-    background-color: black;
+    background-color: slategray;
 }
 
 h1 {
@@ -8,19 +8,19 @@ h1 {
 
 /*tags with different ids can be individually styled*/
 #p1 {
-    color:antiquewhite
+    color:maroon
 }
 
 #p2 {
-    color:blue
+    color:rgb(12, 252, 255)
 }
 
 #p3 {
-    color:gold
+    color:#59ff5f
 }
 
 #p4 {
-    color:forestgreen
+    color:hsla(302, 76%, 21%, 0.597)
 }
 
 /*tags can also be styled in groups called classes*/
