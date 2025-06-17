@@ -1,0 +1,53 @@
+@font-face {
+    src: url(fonts/Savate-VariableFont_wght.ttf);
+    font-family: Savate;
+}
+
+@font-face {
+    font-family: Handlike;
+    src: url(fonts/ShadowsIntoLight-Regular.ttf);
+}
+
+body {
+    background-color: slategray;
+}
+
+h1 {
+    color:wheat;
+    font-family: Verdana, Geneva, Tahoma, sans-serif, Arial, Helvetica;
+}
+
+/*tags with different ids can be individually styled*/
+#p1 {
+    color:maroon;
+}
+
+#p2 {
+    color:rgb(12, 252, 255);
+}
+
+#p3 {
+    color:#59ff5f;
+    font-family: Savate;
+}
+
+#p4 {
+    color:hsla(302, 76%, 21%, 0.597);
+    font-family: Handlike;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+/*tags can also be styled in groups called classes*/
+/*font style and weight are normal by default*/
+.odd {
+    font-style: italic;
+    font-weight: bold;
+}
+
+/*fonts.google.com has many fonts to choose from*/
+.even {
+    font-family: "lucida console", "courier new";
+    font-size: 1em;
+    /*For font size, em is basically standard, 1 em means 100% of the regular size and 1.1 em means 110% the size, etc.*/
+}
