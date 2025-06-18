@@ -46,13 +46,23 @@ h1 {
     font-family: Handlike;
     font-size: 1.3em;
     font-weight: bold;
+    margin: 0px;
 }
 
 #box1 {
-    width: 100px;
-    height: 100px;
     background-color: bisque;
     box-shadow: 4px 5px 2px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    /*margin: 50px*/ /*applies margin to all sides*/
+    /*margin: auto;*/ /*centers element relative to window*/
+}
+
+#box2 {
+    background-color: blue;
+    margin-left: auto; /*sticks to the left*/
 }
 
 /*tags can also be styled in groups called classes*/
@@ -67,4 +77,11 @@ h1 {
     font-family: "lucida console", "courier new";
     font-size: 1em;
     /*For font size, em is basically standard, 1 em means 100% of the regular size and 1.1 em means 110% the size, etc.*/
+}
+
+.box {
+    border: 5px solid;
+    font-size: 5em;
+    width: 250px;
+    height: 250px;
 }
