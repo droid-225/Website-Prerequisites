@@ -37,6 +37,8 @@ h1 {
 #p3 {
     color:#59ff5f;
     font-family: Savate;
+    /*text-shadow: horizontal-offset vertical-offset blur(optional)*/
+    text-shadow: -2px -2px 2px black, 2px 2px 2px blue;
 }
 
 #p4 {
@@ -44,6 +46,13 @@ h1 {
     font-family: Handlike;
     font-size: 1.3em;
     font-weight: bold;
+}
+
+#box1 {
+    width: 100px;
+    height: 100px;
+    background-color: bisque;
+    box-shadow: 4px 5px 2px;
 }
 
 /*tags can also be styled in groups called classes*/
