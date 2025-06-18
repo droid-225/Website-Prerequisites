@@ -65,6 +65,21 @@ h1 {
     margin-left: auto; /*sticks to the left*/
 }
 
+#img1 {
+    float: left;
+    margin-right: 10px;
+}
+
+#img2 {
+    float: right;
+    margin-left: 10px;
+}
+
+#floatBox {
+    border: 10px solid black;
+    display: flow-root;
+}
+
 /*tags can also be styled in groups called classes*/
 /*font style and weight are normal by default*/
 .odd {
