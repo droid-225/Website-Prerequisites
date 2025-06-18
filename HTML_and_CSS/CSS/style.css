@@ -87,6 +87,22 @@ h1 {
     /*overflow-clip-margin: 13px;*/ /*used with overflow: clip to decide how much of the overflow is show before being hidden*/
 }
 
+#displayDiv {
+    background-color: pink;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    /*visibility: hidden;*/ /*makes element invisible*/
+}
+
+#displaySpan {
+    background-color: turquoise;
+    width: 100px;
+    height: 100px;
+    /*width and height properties do not affect inline elements*/
+    display: inline-block;
+}
+
 /*tags can also be styled in groups called classes*/
 /*font style and weight are normal by default*/
 .odd {
