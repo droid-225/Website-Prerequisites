@@ -80,6 +80,13 @@ h1 {
     display: flow-root;
 }
 
+#overflowBox {
+    border: 2px solid;
+    height: 75px;
+    overflow: auto;
+    /*overflow-clip-margin: 13px;*/ /*used with overflow: clip to decide how much of the overflow is show before being hidden*/
+}
+
 /*tags can also be styled in groups called classes*/
 /*font style and weight are normal by default*/
 .odd {
