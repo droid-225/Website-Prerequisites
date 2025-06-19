@@ -70,6 +70,24 @@
                 static: default position for an element-->
         <div id="box124">
             <!--<div id="box224"></div>-->
-        </div>        
+        </div>
+        
+        <br>
+        <!--combinators: explains the relationship between listed selectors
+              : descendant, all internal elements 
+            > : child, all childs are descendants but not all descendants are children
+            ~ : general sibling, all near elements
+            + : adjacent sibling, direct next element
+            Syntx: selector [combinator] selector-->
+        <div id="container26">
+            <p>This is #1</p>
+            <p>This is #2</p>
+            <div>
+                <p>This is #3</p>
+            </div>
+        </div>
+
+        <p>This is #4</p>
+        <p>This is #5</p>
     </body>
 </html>
