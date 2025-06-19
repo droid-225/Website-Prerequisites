@@ -123,3 +123,23 @@ h1 {
     width: 250px;
     height: 250px;
 }
+
+.container23 {
+    background-color: skyblue;
+    height: 400px; /*100 vh means the heights takes up 100% of the veiwport height*/
+}
+
+.box23 {
+    background-color: beige;
+    border: 2px solid;
+    padding: 25px;
+    box-sizing: border-box; /*border-box parameter makes it so the height and width take into account any padding and border*/
+    height: auto;
+    width: 50%;
+    float: left;
+    text-align: center;
+
+    /*max-width: 25%;
+    min-width: 75%;*/ /*max and min properties override previous height and width properties*/
+    min-height: 50%;
+}
