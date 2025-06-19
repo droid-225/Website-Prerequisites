@@ -103,6 +103,34 @@ h1 {
     display: inline-block;
 }
 
+#box124 {
+    width: 200px;
+    height: 200px;
+    background-color: #8ACE00;
+    position: static; /*default*/
+    
+    /*position: sticky;
+    bottom: 0px;
+    right: 0px;*/
+    
+    /*position: fixed;
+    right: 0px;
+    top: 0px;*/ /*for some reason doesn't work without the positional data*/
+    
+    /*position: relative;
+    top: 100px;
+    left: 100px;*/
+}
+
+#box224 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute; /*position relative to box 1 (its parent container)*/
+    top: 50px;
+    left: 50px;
+}
+
 /*tags can also be styled in groups called classes*/
 /*font style and weight are normal by default*/
 .odd {
