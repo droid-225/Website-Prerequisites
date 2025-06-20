@@ -14,6 +14,13 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
+    margin: 0px;
+}
+
+main {
+    margin-left: 20px;
+    margin-right: 20px;
+    color: white;
 }
 
 #first {
@@ -44,15 +51,15 @@ a:visited {
     color:white;
 }
 
-li:hover {
+#ul27 li:hover {
     background-color: yellowgreen;
 }
 
-li:not(:hover) {
+#ul27 li:not(:hover) {
     background-color: aquamarine;
 }
 
-li:nth-child(even) {
+#ul27 li:nth-child(even) {
     background-color: azure;
 }
 
@@ -325,4 +332,29 @@ li:nth-child(even) {
 
 .dropdown {
     display: inline-block;
+}
+
+.navbar ul{
+    list-style-type: none;
+    background-color: gray;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+    font-size: 1em;
+}
+
+.navbar a:hover {
+    background-color: black;
+}
+
+.navbar li {
+    float: left;
 }
