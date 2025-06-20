@@ -287,3 +287,42 @@ li:nth-child(even) {
     background-color: gray;
     border-radius: 10px;
 }
+
+.dropdown button {
+    background-color: forestgreen;
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.dropdown .content {
+    background-color: antiquewhite;
+    position: absolute;
+    min-width: 100px;
+    box-shadow: 2px 2px 5px forestgreen;
+    display: none;
+}
+
+.dropdown:hover .content {
+    display: block;
+}
+
+.dropdown:hover button {
+    background-color: yellowgreen;
+}
+
+.dropdown a:hover {
+    background-color: green;
+}
+
+.dropdown {
+    display: inline-block;
+}
