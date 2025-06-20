@@ -10,7 +10,7 @@
 
 body {
     /*background-color: slategray;*/
-    background-image: url(background.jpg);
+    background-image: url(images/background.jpg);
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
@@ -357,4 +357,27 @@ a:visited {
 
 .navbar li {
     float: left;
+}
+
+.gallery {
+    display: inline-block;
+    border: 1px solid hsl(0, 0%, 60%);
+    margin: 5px;
+    width: 200px;
+}
+
+.gallery .description {
+    padding: 10px;
+    text-align: center;
+    background-color: hsla(0, 0%, 100%, 0.5);
+
+}
+
+.gallery:hover {
+    border: 1px solid hsl(0, 0%, 20%);
+}
+
+.gallery img {
+    width: 100%; /*100% of the width of the container (here its the gallery div)*/
+    height: auto;
 }
