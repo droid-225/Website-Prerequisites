@@ -265,3 +265,25 @@ li:nth-child(even) {
     min-width: 75%;*/ /*max and min properties override previous height and width properties*/
     min-height: 50%;
 }
+
+.pagination {
+    text-align: center;
+}
+
+.pagination a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    display: inline-block;
+}
+
+.pagination a.active {
+    background-color: #8ACE00;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: gray;
+    border-radius: 10px;
+}
