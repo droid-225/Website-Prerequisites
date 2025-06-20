@@ -16,7 +16,7 @@ body {
     background-size: cover;
 }
 
-h1 {
+#first {
     color:wheat;
     font-family: Verdana, Geneva, Tahoma, sans-serif, Arial, Helvetica;
     border-style: inset;
@@ -187,6 +187,42 @@ li:nth-child(even) {
 
 #greeting:hover p{
     display: block;
+}
+
+#greeting28::first-letter {
+    font-size: 2em;
+    font-style: italic;
+}
+
+#text28 {
+    background-color: white;
+}
+
+#text28::first-line {
+    background-color: coral;
+}
+
+#text28::selection {
+    color: gold;
+    background-color: red;
+}
+
+/*windows + ; pops up a emoji selection menu*/
+#apple::after {
+    content: "🍎";
+}
+
+#orange::after {
+    content: "🍊";
+}
+
+#banana::after {
+    content: "🍌";
+}
+
+#fruit li::marker {
+    content: "✅";
+    font-size: 1.2em;
 }
 
 /*tags can also be styled in groups called classes*/
