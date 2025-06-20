@@ -25,6 +25,37 @@ h1 {
     text-align: center;
 }
 
+a:link {
+    color: yellow;
+    font-size: 1.5em;
+}
+
+a:hover {
+    color: pink;
+    font-size: 2em;
+}
+
+a:active {
+    color: red;
+    font-size: 3em;
+}
+
+a:visited {
+    color:white;
+}
+
+li:hover {
+    background-color: yellowgreen;
+}
+
+li:not(:hover) {
+    background-color: aquamarine;
+}
+
+li:nth-child(even) {
+    background-color: azure;
+}
+
 /*tags with different ids can be individually styled*/
 #p1 {
     color:maroon;
@@ -142,6 +173,20 @@ h1 {
 
 #container26 + p {
     background-color: yellow;
+}
+
+#greeting {
+    background-color: aqua;
+}
+
+#greeting p{
+    background-color: bisque;
+    padding: 10px;
+    display: none;
+}
+
+#greeting:hover p{
+    display: block;
 }
 
 /*tags can also be styled in groups called classes*/
