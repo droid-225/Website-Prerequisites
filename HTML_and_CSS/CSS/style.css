@@ -381,3 +381,42 @@ a:visited {
     width: 100%; /*100% of the width of the container (here its the gallery div)*/
     height: auto;
 }
+
+.container35 {
+    display: flex;
+    flex-direction: row; /*default is row*/
+    /*justify-content: space-evenly;*/ /*default is flex-start, works on the main axis (x-axis)*/
+    border: 10px solid black;
+    height: 90vh;
+    /*align-items: baseline;*/  /*default is flex-start, works on the cross axis (y-axis)*/
+    /*flex-wrap: wrap; /*default is nowrap*/
+    align-content: start;*/
+    /*column-gap: 1em;
+    row-gap: 1em;*/
+}
+
+.box35 {
+    width: 150px;
+    height: 150px;
+    font-size: 8em;
+    text-align: center;
+    border-radius: 15px;
+}
+
+#box351 {
+    background-color: aqua;
+    /*align-self: end;*/ /*default is start*/
+    order: -1; /*1 is end and -1 is beginning*/
+}
+
+#box352 {
+    background-color: #8ACE00;
+}
+
+#box353 {
+    background-color: pink;
+}
+
+#box354 {
+    background-color: antiquewhite;
+}
