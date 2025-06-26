@@ -51,6 +51,7 @@ students **= 2; //students = students ** 2, ** is the exponent operator
 // Easy Way: Window Prompt
 // Professional Way: HTML textbox
 
+/*
 let username;
 
 //username = window.prompt("Enter Username:");
@@ -60,5 +61,24 @@ document.getElementById("submit").onclick = function() {
     document.getElementById("myH1").textContent = `Hello ${username}`;
     //console.log(username);
 };
+*/
 
-//
+//Type Conversion
+/*
+let age = window.prompt("How Old Are You?");
+
+age = Number(age);
+age += 1; //by default, if not instantiated previously, varible is of type string
+*/
+
+let x = "pizza";
+let y = "pizza";
+let z = "pizza";
+
+x = Number(x); //any non-number string to a number becomes NaN, unless empty
+y = String(y); //no change
+z = Boolean(z); //non-empty values is always true
+
+console.log(x, typeof x);
+console.log(y, typeof y);
+console.log(z, typeof z);
