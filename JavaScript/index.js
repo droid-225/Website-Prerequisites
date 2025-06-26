@@ -88,7 +88,7 @@ console.log(z, typeof z);
 //Constants
 
 // const: the final of JS
-
+/*
 const PI = 3.14159; //only primitive consts (boolean, numbers, characters) are capitalized
 let radius;
 let circumference;
@@ -99,3 +99,27 @@ radius = Number(radius);
 circumference = 2 * PI * radius;
 
 console.log(circumference);
+*/
+
+//Counter Program
+const decBut = document.getElementById("dec"); // decrease button
+const resetBut = document.getElementById("reset"); // reset button
+const incBut = document.getElementById("inc"); // increase button
+const countLabl = document.getElementById("counter"); // counter label
+
+let count = 0;
+
+decBut.onclick = function() {
+    count--;
+    countLabl.textContent = count;
+};
+
+resetBut.onclick = function() {
+    count = 0;
+    countLabl.textContent = count;
+};
+
+incBut.onclick = function() {
+    count++;
+    countLabl.textContent = count;
+};
