@@ -1,14 +1,17 @@
 //Setup
-//console.log(`Hello`); // Can use "", '', or `` (backticks)
-//console.log(`I Like Pizza!`);
+/*
+console.log(`Hello`); // Can use "", '', or `` (backticks)
+console.log(`I Like Pizza!`);
 
-//window.alert(`This is an alert!`);
-//window.alert(`Did you see that!`);
+window.alert(`This is an alert!`);
+window.alert(`Did you see that!`);
 
-//document.getElementById("myH1").textContent = `Hello`;
-//document.getElementById("myP").textContent = `I like pizza!!!`;
+document.getElementById("myH1").textContent = `Hello`;
+document.getElementById("myP").textContent = `I like pizza!!!`;
+*/
 
 //Variables
+/*
 let y = 5;
 let x; //Declaration
 x = 10.5; //Assignment
@@ -25,3 +28,20 @@ if(boollin) {
 document.getElementById("p1").textContent = `Your Name is: ${name}`;
 document.getElementById("p2").textContent = `You Are ${age} Years Old`;
 document.getElementById("p3").textContent = `Enrolled: ` + student;
+*/
+
+//Arithmetic Operators (the usual)
+let students = 30;
+
+//students -= 1;
+students **= 2; //students = students ** 2, ** is the exponent operator
+//% (modulus operator) is the same here
+//increment and decrement operators exist
+/* Operator Precedence:
+1. Parenthesis
+2. Exponents
+3. Multiplication, Division, Modulo
+4. Addition & Subtraction 
+*/
+
+console.log(students);
