@@ -71,6 +71,7 @@ age = Number(age);
 age += 1; //by default, if not instantiated previously, varible is of type string
 */
 
+/*
 let x = "pizza";
 let y = "pizza";
 let z = "pizza";
@@ -82,3 +83,19 @@ z = Boolean(z); //non-empty values is always true
 console.log(x, typeof x);
 console.log(y, typeof y);
 console.log(z, typeof z);
+*/
+
+//Constants
+
+// const: the final of JS
+
+const PI = 3.14159; //only primitive consts (boolean, numbers, characters) are capitalized
+let radius;
+let circumference;
+
+radius = window.prompt(`Enter the Radius:`);
+radius = Number(radius);
+
+circumference = 2 * PI * radius;
+
+console.log(circumference);
