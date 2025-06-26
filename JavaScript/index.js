@@ -31,6 +31,7 @@ document.getElementById("p3").textContent = `Enrolled: ` + student;
 */
 
 //Arithmetic Operators (the usual)
+/*
 let students = 30;
 
 //students -= 1;
@@ -44,4 +45,20 @@ students **= 2; //students = students ** 2, ** is the exponent operator
 4. Addition & Subtraction 
 */
 
-console.log(students);
+//console.log(students);
+
+//User Input
+// Easy Way: Window Prompt
+// Professional Way: HTML textbox
+
+let username;
+
+//username = window.prompt("Enter Username:");
+
+document.getElementById("submit").onclick = function() {
+    username = document.getElementById("input").value;
+    document.getElementById("myH1").textContent = `Hello ${username}`;
+    //console.log(username);
+};
+
+//
