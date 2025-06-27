@@ -1,4 +1,14 @@
 body {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+#rollButton {
+    font-size: 3em;
+    padding: 5px 25px;
+    border-radius: 5px;
+}
+
+.resultLabels {
+    font-size: 3em;
 }

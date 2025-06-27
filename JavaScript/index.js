@@ -147,3 +147,25 @@ let min = Math.min(x, y, z);
 
 console.log(min);
 */
+
+//Random Number Generator
+const rollButton = document.getElementById("rollButton");
+const label1 = document.getElementById("label1");
+const label2 = document.getElementById("label2");
+const label3 = document.getElementById("label3");
+const min = 1;
+const max = 6;
+let randNum1;
+let randNum2;
+let randNum3;
+
+rollButton.onclick = function() {
+    randNum1 = Math.floor(Math.random() * max) + min; //Math.random() gives a random number between 0 and 1 by default
+    randNum2 = Math.floor(Math.random() * max) + min;
+    randNum3 = Math.floor(Math.random() * max) + min;
+    
+    label1.textContent = randNum1;
+    label2.textContent = randNum2;
+    label3.textContent = randNum3;
+};
+//console.log(randNum);
