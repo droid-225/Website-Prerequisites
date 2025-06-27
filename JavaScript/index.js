@@ -102,6 +102,7 @@ console.log(circumference);
 */
 
 //Counter Program
+/*
 const decBut = document.getElementById("dec"); // decrease button
 const resetBut = document.getElementById("reset"); // reset button
 const incBut = document.getElementById("inc"); // increase button
@@ -123,3 +124,26 @@ incBut.onclick = function() {
     count++;
     countLabl.textContent = count;
 };
+*/
+
+//Math
+/*
+let x = 3;
+let y = -2;
+let z = 1;
+
+//z = Math.round(x);
+//z = Math.floor(x); //always rounds down
+//z = Math.ceil(x); //always rounds up
+//z = Math.trunc(x); //removes any values after decimal
+//z = Math.pow(x, y);
+//z = Math.sqrt(x);
+//z = Math.log(x);
+//z = Math.sin(x); //input is in radians, same for cos and tan
+//z = Math.abs(y); //absolute value
+//z = Math.sign(x); // if negative, returns -1, returns 1 if positive
+let max = Math.max(x, y, z);
+let min = Math.min(x, y, z);
+
+console.log(min);
+*/
