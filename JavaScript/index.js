@@ -186,6 +186,7 @@ else
 
 //Checked Property
 //.checked: Used for radio buttons and checkboxes
+/*
 const myCheckBox = document.getElementById("myCheckBox");
 const visaBtn = document.getElementById("visaBtn");
 const mastercardBtn = document.getElementById("mastercardBtn");
@@ -209,3 +210,14 @@ submitBtn.onclick = function() {
     else
         paymentResult.textContent = `Please select a payment method.`
 }
+*/
+
+//Ternary Operator
+//Syntax: condition ? codeIfTrue : codeIfFalse;
+
+//let age = -21;
+//let message = age >= 18 ? "You are an adult!" : age < 0 ? "You can't be less than 0!" : "You are a minor!";
+let amount = 90;
+let discount = amount >= 100 ? 10 : 0;
+
+console.log(`Your total is ${amount - (amount * (discount / 100))}`);
