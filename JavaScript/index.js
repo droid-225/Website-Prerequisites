@@ -149,6 +149,7 @@ console.log(min);
 */
 
 //Random Number Generator
+/*
 const rollButton = document.getElementById("rollButton");
 const label1 = document.getElementById("label1");
 const label2 = document.getElementById("label2");
@@ -169,3 +170,16 @@ rollButton.onclick = function() {
     label3.textContent = randNum3;
 };
 //console.log(randNum);
+*/
+
+//if Statements
+/*
+let age = 5;
+
+//nested ifs and else ifs also work
+if(age >= 18) {
+    console.log("You are an adult!");
+}
+else
+    console.log("You are not an adult!");
+*/
