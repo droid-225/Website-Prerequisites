@@ -253,7 +253,7 @@ switch(day) {
         console.log(`${day} is not a day!`);
 }
 */
-
+/*
 let testScore = 63;
 let letterGrade;
 
@@ -275,3 +275,33 @@ switch(true) {
 }
 
 console.log(`${letterGrade}`);
+*/
+
+//String Methods
+/*
+let name = " Rishit ";
+
+//console.log(name.charAt(0));
+//console.log(name.indexOf("i")); //returns first index of first occurence
+//console.log(name.lastIndexOf("i"));
+//console.log(name.length);
+name = name.trim();
+//name = name.toUpperCase();
+//name = name.toLowerCase();
+//name = name.repeat(2);
+//console.log(name);
+
+//let result = name.startsWith(" ");
+//result = name.endsWith(" ");
+//result = name.includes(" ");
+console.log(result);
+*/
+/*
+let number = "123-456-7890";
+
+//number = number.replaceAll("-", " ");
+//number = number.padStart(15, "0"); 
+number = number.padEnd(15, "0"); 
+
+console.log(number);
+*/
