@@ -321,7 +321,7 @@ let lastName = name.slice(name.indexOf(" ") + 1);
 
 console.log(lastName);
 */
-
+/*
 const email = "mail@mailing.com";
 
 let username = email.slice(0, email.indexOf("@"));
@@ -329,3 +329,29 @@ let extension = email.slice(email.indexOf("@") + 1);
 
 console.log(username);
 console.log(extension);
+*/
+
+//Method Chaining
+
+//Not Using Method Chaining
+/*
+let username = window.prompt("Enter Your Username:");
+
+username = username.trim();
+let letter = username.charAt(0);
+letter = letter.toUpperCase();
+
+let extraChars = username.slice(1);
+extraChars = extraChars.toLowerCase();
+
+username = letter + extraChars;
+console.log(username);
+*/
+
+//Using Method Chaining
+/*
+let username = window.prompt("Enter your username:");
+
+username = username.trim().charAt(0).toUpperCase() + username.trim().slice(1).toLocaleLowerCase();
+console.log(username);
+*/
