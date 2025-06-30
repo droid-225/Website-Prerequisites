@@ -305,3 +305,27 @@ number = number.padEnd(15, "0");
 
 console.log(number);
 */
+
+//String Slicing
+//Syntax: string.slice(start, end); //ending index is exclusive, starting index is inclusive
+/*
+const name = "Rishit Shah"
+
+//let firstName = name.slice(0, 7);
+//let lastName = name.slice(7);
+//let firstChar = name.slice(0, 1);
+//let lastChar = name.slice(-1); // negative index works backwards from the end to the start
+
+let firstName = name.slice(0, name.indexOf(" ")); // dynamic
+let lastName = name.slice(name.indexOf(" ") + 1);
+
+console.log(lastName);
+*/
+
+const email = "mail@mailing.com";
+
+let username = email.slice(0, email.indexOf("@"));
+let extension = email.slice(email.indexOf("@") + 1);
+
+console.log(username);
+console.log(extension);
