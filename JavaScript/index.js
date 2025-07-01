@@ -348,10 +348,16 @@ username = letter + extraChars;
 console.log(username);
 */
 
-//Using Method Chaining
-/*
-let username = window.prompt("Enter your username:");
+//Logical Operators
+// &&: and
+// ||: or
+// !: not
+// Pretty standard stuff
 
-username = username.trim().charAt(0).toUpperCase() + username.trim().slice(1).toLocaleLowerCase();
-console.log(username);
-*/
+const temp = 25;
+
+if(temp > 0 && temp <= 30) {
+    console.log("The weather is good");
+}
+else
+    console.log("The weather is BAD!!!");
