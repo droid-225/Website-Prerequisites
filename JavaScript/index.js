@@ -353,7 +353,7 @@ console.log(username);
 // ||: or
 // !: not
 // Pretty standard stuff
-
+/*
 const temp = 25;
 
 if(temp > 0 && temp <= 30) {
@@ -361,3 +361,21 @@ if(temp > 0 && temp <= 30) {
 }
 else
     console.log("The weather is BAD!!!");
+*/
+
+//Strict Equality
+// ===: strict equality operator, checks both value and type
+// ==: comparison operator, checks only value, not type
+// !==: strict inequality operator, checks both value and type, but returns true if not equal
+// !=: inequality operator, checks only value, not type, but returns true if not equal
+// =: assignment operator
+// Useful when taking user input (default is string)
+
+const PI = 3.14;
+
+if(PI !== "3.14") {
+    console.log("That's NOT PI!");
+}
+else {
+    console.log("That's some PI!");
+}
