@@ -370,7 +370,7 @@ else
 // !=: inequality operator, checks only value, not type, but returns true if not equal
 // =: assignment operator
 // Useful when taking user input (default is string)
-
+/*
 const PI = 3.14;
 
 if(PI !== "3.14") {
@@ -378,4 +378,18 @@ if(PI !== "3.14") {
 }
 else {
     console.log("That's some PI!");
+}
+*/
+
+//While Loop
+// pretty standard stuff, do while also works
+let x = 0;
+
+while(x < 5) {
+    if(x === 3) {
+        x++;
+        continue; // skips the rest of the loop and goes to the next iteration
+    }
+    console.log(`x is ${x}`);
+    x++;
 }
