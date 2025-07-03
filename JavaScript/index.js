@@ -383,6 +383,7 @@ else {
 
 //While Loop
 // pretty standard stuff, do while also works
+/*
 let x = 0;
 
 while(x < 5) {
@@ -393,3 +394,15 @@ while(x < 5) {
     console.log(`x is ${x}`);
     x++;
 }
+*/
+
+//For Loop
+// Same as java, just use 'let' instead of 'int'
+for(let i = 0; i < 5; i++) {
+    if(i === 3)
+        break; 
+
+    console.log(`Hello`);
+}
+
+console.log(`Loop Ended!`);
