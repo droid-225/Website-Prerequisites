@@ -398,6 +398,7 @@ while(x < 5) {
 
 //For Loop
 // Same as java, just use 'let' instead of 'int'
+/*
 for(let i = 0; i < 5; i++) {
     if(i === 3)
         break; 
@@ -406,3 +407,40 @@ for(let i = 0; i < 5; i++) {
 }
 
 console.log(`Loop Ended!`);
+*/
+
+//Number Guessing Game
+
+const minNum = 1;
+const maxNum = 100;
+const answer = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;;
+
+let attempts = 0;
+let guess;
+let running = true;
+
+while(running) {
+    guess = Number(window.prompt(`Guess a number between ${minNum} and ${maxNum}:`));
+    
+    if(isNaN(guess)) {
+        window.alert(`Please enter a valid number!`);
+        continue;
+    }
+    else if(guess < minNum || guess > maxNum) {
+        window.alert(`Please enter a number between ${minNum} and ${maxNum}!`);
+        continue;
+    }
+    else {
+        attempts++;
+        if(guess < answer) {
+            window.alert(`Your guess is too low!`);
+        }
+        else if(guess > answer) {
+            window.alert(`Your guess is too high!`);
+        }
+        else {
+            window.alert(`Congratulations! You guessed the number ${answer} in ${attempts} attempts!`);
+            running = false; // exit the loop
+        }
+    }
+}
