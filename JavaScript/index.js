@@ -410,7 +410,7 @@ console.log(`Loop Ended!`);
 */
 
 //Number Guessing Game
-
+/*
 const minNum = 1;
 const maxNum = 100;
 const answer = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;;
@@ -444,3 +444,27 @@ while(running) {
         }
     }
 }
+*/
+
+//Functions
+/*
+function happyBirthday(name, age) {
+    console.log(`Happy Birthday ${name}!`);
+    console.log(`You are ${age} years old!`);
+}
+
+happyBirthday("Bro", 25);
+happyBirthday("Espoingbob", 102);
+*/
+
+function add(x, y) {
+    return x + y;
+}
+
+function isEven(num) {
+    return num % 2 === 0;
+}
+
+let num = add(6, 10);
+console.log(`The answer is ${num}`);
+console.log(`${num} is ${isEven(num) ? "even" : "odd"}.`);
