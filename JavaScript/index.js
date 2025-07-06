@@ -456,7 +456,7 @@ function happyBirthday(name, age) {
 happyBirthday("Bro", 25);
 happyBirthday("Espoingbob", 102);
 */
-
+/*
 function add(x, y) {
     return x + y;
 }
@@ -468,3 +468,20 @@ function isEven(num) {
 let num = add(6, 10);
 console.log(`The answer is ${num}`);
 console.log(`${num} is ${isEven(num) ? "even" : "odd"}.`);
+*/
+
+//Variable Scope
+
+let x = 0; // global variable
+
+func1();
+func2();
+
+function func1() {
+    console.log(x);
+}
+
+function func2() {
+    let x = 2; // local variables used first if available
+    console.log(x);
+}
