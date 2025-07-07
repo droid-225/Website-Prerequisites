@@ -488,7 +488,7 @@ function func2() {
 */
 
 //Temp Conversion Program
-
+/*
 const textBox = document.getElementById("textBox");
 const toF = document.getElementById("toF");
 const toC = document.getElementById("toC");
@@ -510,3 +510,26 @@ function convert() {
         result.textContent = 'Select a Unit!';
     }
 }
+*/
+
+//Arrays
+
+let fruits = ["apple", "orange", "banana"];
+
+fruits[0] = "kiwi"; // change first element
+fruits[3] = "mango"; // add new element at index 3
+fruits.push("grape"); // add new element at the end
+fruits.pop(); // remove last element
+fruits.unshift("strawberry"); // add new element at the beginning
+fruits.shift(); // remove first element
+fruits.sort(); // sort the array in alphabetical order
+fruits.reverse(); // reverse the array
+
+for(let fruit of fruits) {
+    console.log(fruit);
+} // for each loops for the win!
+
+//console.log(fruits);
+console.log(fruits.length);
+console.log(fruits.indexOf("banana")); // returns -1 if not found
+console.log(fruits.includes("kiwi")); // returns true or false
