@@ -513,7 +513,7 @@ function convert() {
 */
 
 //Arrays
-
+/*
 let fruits = ["apple", "orange", "banana"];
 
 fruits[0] = "kiwi"; // change first element
@@ -533,3 +533,20 @@ for(let fruit of fruits) {
 console.log(fruits.length);
 console.log(fruits.indexOf("banana")); // returns -1 if not found
 console.log(fruits.includes("kiwi")); // returns true or false
+*/
+
+//Spread Operator
+// ...: spreads the elements of an array or iterable (e.g. string) into another array or into separate variables
+
+let number = [1, 2, 3, 4, 5];
+let max = Math.max(...number);
+let min = Math.min(...number);
+
+let name = "Rishit";
+let letters = [...name]; // spreads the characters of the string into an array
+
+let fruits = ["apple", "banana", "orange"];
+let vegetables = ["carrot", "broccoli", "spinach"];
+let foods = [...fruits, ...vegetables, "eggs", "milk"]; // shallow copy of array fruits and vegetables
+
+console.log(foods);
