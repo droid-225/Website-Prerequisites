@@ -1,4 +1,53 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(202, 209, 216);
+}
+
+h1 {
+    color: rgb(2, 10, 253);
+}
+
+form {
+    background-color: whitesmoke;
+    text-align: center;
+    max-width: 350px;
+    margin: auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgb(111, 6, 124);
+}
+
+#textBox {
+    width: 50%;
+    text-align: center;
+    font-size: 2em;
+    border: 2px solid black;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+button {
+    margin-top: 15px;
+    background-color: pink;
+    font-size: 1.5em;
+    border: 1px black solid;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: hsl(0, 73%, 77%);
+    color: white;
+}
+
+#result {
+    font-size: 1.75em;
+    font-weight: bold;
 }
 

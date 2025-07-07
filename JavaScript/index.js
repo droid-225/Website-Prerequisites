@@ -471,7 +471,7 @@ console.log(`${num} is ${isEven(num) ? "even" : "odd"}.`);
 */
 
 //Variable Scope
-
+/*
 let x = 0; // global variable
 
 func1();
@@ -484,4 +484,29 @@ function func1() {
 function func2() {
     let x = 2; // local variables used first if available
     console.log(x);
+}
+*/
+
+//Temp Conversion Program
+
+const textBox = document.getElementById("textBox");
+const toF = document.getElementById("toF");
+const toC = document.getElementById("toC");
+const result = document.getElementById("result");
+let temp;
+
+function convert() {
+    if(toF.checked) {
+        temp = Number(textBox.value);
+        temp = (temp * 9/5) + 32;
+        result.textContent = `Temperature in Fahrenheit: ${temp.toFixed(2)}°F`;
+    }
+    else if(toC.checked) {
+        temp = Number(textBox.value);
+        temp = (temp - 32) * 5/9;
+        result.textContent = `Temperature in Celsius: ${temp.toFixed(2)}°C`;
+    }
+    else {
+        result.textContent = 'Select a Unit!';
+    }
 }
