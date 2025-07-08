@@ -537,7 +537,7 @@ console.log(fruits.includes("kiwi")); // returns true or false
 
 //Spread Operator
 // ...: spreads the elements of an array or iterable (e.g. string) into another array or into separate variables
-
+/*
 let number = [1, 2, 3, 4, 5];
 let max = Math.max(...number);
 let min = Math.min(...number);
@@ -550,3 +550,33 @@ let vegetables = ["carrot", "broccoli", "spinach"];
 let foods = [...fruits, ...vegetables, "eggs", "milk"]; // shallow copy of array fruits and vegetables
 
 console.log(foods);
+*/
+
+//Rest Parameters
+// ...: collects the remaining arguments into an array
+// Basically the opposite of the spread operator
+
+function openFridge(...foods) {
+    console.log(...foods);
+}
+
+function getFood(...foods) {
+    return foods;
+}
+
+const food1 = "pizza";
+const food2 = "burger";
+const food3 = "pasta";
+const food4 = "salad";
+
+//openFridge(food1, food2, food3, food4); // collects all arguments into an array
+
+const foods = getFood(food1, food2, food3, food4);
+console.log(foods); // returns an array of all arguments
+
+function combineStrings(...strings) {
+    return strings.join(" ");
+}
+
+let name = combineStrings("Rishit", "Shah");
+console.log(name);
