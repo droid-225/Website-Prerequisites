@@ -583,8 +583,7 @@ console.log(name);
 */
 
 //Dice Roller Program
-
-
+/*
 function rollDice() {
     const numOfDice = document.getElementById('numOfDice').value;
     const diceResult = document.getElementById('diceResult');
@@ -601,3 +600,47 @@ function rollDice() {
     diceResult.textContent = `Results: ${values.join(" ")}`;
     diceImages.innerHTML = images.join("");
 }
+*/
+
+//Random Password Generator Program
+
+function generatePassword(length, includeLowercase, includeUppercase, includeNumbers, includeSymbols) {
+    const lowercaseChars = 'abcdefghijklmnopqrstuvwxyz';
+    const uppercaseChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const numberChars = '0123456789';
+    const symbolChars = '!@#$%^&*()_+-=[]{}|;:,.<>?';
+
+    let allowedChars = "";
+    let password = "";
+
+    allowedChars += includeLowercase ? lowercaseChars : "";
+    allowedChars += includeUppercase ? uppercaseChars : "";
+    allowedChars += includeNumbers ? numberChars : "";  
+    allowedChars += includeSymbols ? symbolChars : "";
+    
+    if(length <= 0) {
+        return "Password length must be greater than 0.";
+    }
+
+    if(allowedChars.length === 0) {
+        return "At least one character type must be selected.";
+    }
+
+    for(let i = 0; i < length; i++) {
+        const randomIndex = Math.floor(Math.random() * allowedChars.length);
+
+        password += allowedChars[randomIndex];
+    }
+
+    return password;
+}
+
+const passLength = 1000;
+const includeLowercase = true;
+const includeUppercase = true;
+const includeNumbers = true;
+const includeSymbols = true;
+
+const password = generatePassword(passLength, includeLowercase, includeUppercase, includeNumbers, includeSymbols);
+console.log(`Generated Password: ${password}`);
+document.getElementById("passField").textContent = password;
