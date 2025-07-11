@@ -603,7 +603,7 @@ function rollDice() {
 */
 
 //Random Password Generator Program
-
+/*
 function generatePassword(length, includeLowercase, includeUppercase, includeNumbers, includeSymbols) {
     const lowercaseChars = 'abcdefghijklmnopqrstuvwxyz';
     const uppercaseChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -644,3 +644,45 @@ const includeSymbols = true;
 const password = generatePassword(passLength, includeLowercase, includeUppercase, includeNumbers, includeSymbols);
 console.log(`Generated Password: ${password}`);
 document.getElementById("passField").textContent = password;
+*/
+
+//Callbacks
+// A function that is passed as an argument to another function and is executed after the completion of that function
+
+/*
+hello(wait);
+
+function hello(callback) {
+    console.log("Hello!");
+    callback();
+}
+
+function wait() {
+    console.log("Wait!");
+}
+
+function leave() {
+    console.log("Leave!");
+}
+
+function goodbye() {
+    console.log("Goodbye!");
+}
+*/
+
+/*
+sum(displayPage, 5, 10);
+
+function sum(callback, x, y) {
+    let result = x + y;
+    callback(result);
+}
+
+function displayResult(result) {
+    console.log(`The sum is: ${result}`);
+}
+
+function displayPage(result) {
+    document.getElementById("myH1").textContent = `The sum is: ${result}`;
+}
+*/
