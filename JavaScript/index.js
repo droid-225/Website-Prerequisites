@@ -686,3 +686,21 @@ function displayPage(result) {
     document.getElementById("myH1").textContent = `The sum is: ${result}`;
 }
 */
+
+//forEach()
+// Used to iterate over arrays, similar to for of loop
+// Syntax: array.forEach(callback(element, index, array))
+// The callback function is called for each element in the array, with the element, index, and the array itself as arguments
+
+let numbers = [1, 2, 3, 4, 5];
+
+numbers.forEach(double);
+numbers.forEach(display);
+
+function double(element, index, array) {
+    array[index] = element * 2;
+}
+
+function display(element) {
+    console.log(element);
+}
