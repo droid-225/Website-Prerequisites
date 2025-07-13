@@ -691,7 +691,7 @@ function displayPage(result) {
 // Used to iterate over arrays, similar to for of loop
 // Syntax: array.forEach(callback(element, index, array))
 // The callback function is called for each element in the array, with the element, index, and the array itself as arguments
-
+/*
 let numbers = [1, 2, 3, 4, 5];
 
 numbers.forEach(double);
@@ -704,3 +704,28 @@ function double(element, index, array) {
 function display(element) {
     console.log(element);
 }
+*/
+
+//.map()
+// Used to !create a new array! with the results of calling a function on every element in the original array
+// Syntax: array.map(callback(element, index, array))
+/*
+const numbers = [1, 2, 3, 4];
+const squares = numbers.map(square);
+
+function square(element) {
+    return element * element;
+}
+
+console.log(squares);
+*/
+
+const dates = ["2025-1-3", "2024-12-25", "2023-11-11"];
+
+function formatDates(element) {
+    const [year, month, day] = element.split("-");
+    return `${day}/${month}/${year}`;
+}
+
+const formattedDates = dates.map(formatDates);
+console.log(formattedDates);
