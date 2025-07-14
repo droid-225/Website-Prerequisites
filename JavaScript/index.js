@@ -733,7 +733,7 @@ console.log(formattedDates);
 
 //.filter()
 // Creates a new array by filtering out elements
-
+/*
 let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 let evenNums = numbers.filter(isEven);
 
@@ -742,3 +742,28 @@ function isEven(element) {
 }
 
 console.log(evenNums);
+*/
+
+//.reduce()
+// Reduces elements in an array to a single value
+
+const prices = [10, 20, 30, 40, 50];
+const total = prices.reduce(sum);
+const max = prices.reduce(getMax);
+const min = prices.reduce(getMin);
+
+function sum(accumulator, element) {
+    return accumulator + element;
+}
+
+function getMax(accumulator, element) {
+    return Math.max(accumulator, element);
+}
+
+function getMin(accumulator, element) {
+    return Math.min(accumulator, element);
+}
+
+console.log(`Total Price: $${total.toFixed(2)}`);
+console.log(`Max Price: $${max.toFixed(2)}`);
+console.log(`Min Price: $${min.toFixed(2)}`);
