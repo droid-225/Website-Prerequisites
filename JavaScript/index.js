@@ -719,7 +719,7 @@ function square(element) {
 
 console.log(squares);
 */
-
+/*
 const dates = ["2025-1-3", "2024-12-25", "2023-11-11"];
 
 function formatDates(element) {
@@ -729,3 +729,16 @@ function formatDates(element) {
 
 const formattedDates = dates.map(formatDates);
 console.log(formattedDates);
+*/
+
+//.filter()
+// Creates a new array by filtering out elements
+
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let evenNums = numbers.filter(isEven);
+
+function isEven(element) {
+    return element % 2 === 0;
+}
+
+console.log(evenNums);
