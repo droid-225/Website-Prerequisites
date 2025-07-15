@@ -747,7 +747,7 @@ console.log(evenNums);
 
 //.reduce()
 // Reduces elements in an array to a single value
-
+/*
 const prices = [10, 20, 30, 40, 50];
 const total = prices.reduce(sum);
 const max = prices.reduce(getMax);
@@ -768,3 +768,17 @@ function getMin(accumulator, element) {
 console.log(`Total Price: $${total.toFixed(2)}`);
 console.log(`Max Price: $${max.toFixed(2)}`);
 console.log(`Min Price: $${min.toFixed(2)}`);
+*/
+
+//Function Expressions
+// Functions can be assigned to variables
+/*
+const hello = function() {
+    console.log("Hello!");
+}
+*/
+
+//hello();
+setTimeout(function(){
+    console.log("Hello!");
+}, 3000);
