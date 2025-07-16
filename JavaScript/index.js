@@ -777,8 +777,30 @@ const hello = function() {
     console.log("Hello!");
 }
 */
-
+/*
 //hello();
 setTimeout(function(){
     console.log("Hello!");
 }, 3000);
+*/
+
+//Arrow Functions
+// Syntax: (parameters) => { code } // curly braces only for multiple lines
+/*
+const hello = (name, age) => {
+    console.log(`Hello, ${name}!`);
+    console.log(`You are ${age} years old!`);
+}
+
+hello("Rishit", 22);
+*/
+
+//setTimeout(() => console.log("Hello!"), 3000);
+
+const numbers = [1, 2, 3, 4, 5];
+
+const evenNums = numbers.filter((element) => element % 2 === 0);
+const sum = numbers.reduce((accumulator, element) => accumulator + element);
+
+console.log(`Even Numbers: ${evenNums}`);
+console.log(`Sum: ${sum}`);
