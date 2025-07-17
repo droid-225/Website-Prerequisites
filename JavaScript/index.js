@@ -796,7 +796,7 @@ hello("Rishit", 22);
 */
 
 //setTimeout(() => console.log("Hello!"), 3000);
-
+/*
 const numbers = [1, 2, 3, 4, 5];
 
 const evenNums = numbers.filter((element) => element % 2 === 0);
@@ -804,3 +804,30 @@ const sum = numbers.reduce((accumulator, element) => accumulator + element);
 
 console.log(`Even Numbers: ${evenNums}`);
 console.log(`Sum: ${sum}`);
+*/
+
+//Objects
+// Objects are collections of related properties and methods
+// Regular OOP stuff
+// Syntax: let objectName = {key: value, function()}
+
+const person1 = {
+    firstName: "Spoingbob",
+    lastName: "Sqgburarepants",
+    age: 102,
+    isEmployed: true,
+    imReady: function() {console.log("I'm ready!");}
+}
+
+const person2 = {
+    firstName: "Pabrick",
+    lastName: "Stdar",
+    age: 25,
+    isEmployed: false,
+    greeting: () => {console.log('This is Patrick!')}
+}
+
+console.log(person1.firstName);
+person1.imReady();
+console.log(person2.firstName);
+person2.greeting();
