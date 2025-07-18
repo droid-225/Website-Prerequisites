@@ -810,7 +810,7 @@ console.log(`Sum: ${sum}`);
 // Objects are collections of related properties and methods
 // Regular OOP stuff
 // Syntax: let objectName = {key: value, function()}
-
+/*
 const person1 = {
     firstName: "Spoingbob",
     lastName: "Sqgburarepants",
@@ -831,3 +831,27 @@ console.log(person1.firstName);
 person1.imReady();
 console.log(person2.firstName);
 person2.greeting();
+*/
+
+//this
+// Reference to the object where 'this' is used
+// the object's value depends on the immediate context
+
+const person1 = {
+    name: "Spongebob",
+    favFood: "Krabby Pattys",
+    greet: function() {
+        console.log(`Hello, my name is ${this.name} and I love ${this.favFood}!`);
+    }
+}
+
+const person2 = {
+    name: "Patrick",
+    favFood: "Seaweed",
+    greet: function() {
+        console.log(`Hello, my name is ${this.name} and I love ${this.favFood}!`);
+    } //when using arrow functions, 'this' refers to the global object, not the object itself
+}
+
+person1.greet();
+person2.greet();
