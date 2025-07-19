@@ -836,7 +836,7 @@ person2.greeting();
 //this
 // Reference to the object where 'this' is used
 // the object's value depends on the immediate context
-
+/*
 const person1 = {
     name: "Spongebob",
     favFood: "Krabby Pattys",
@@ -855,3 +855,23 @@ const person2 = {
 
 person1.greet();
 person2.greet();
+*/
+
+//Constructor
+// Special method for defining the properties and methods of objects
+
+function Car(make, model, year, color) {
+    this.make = make;
+    this.model = model;
+    this.year = year;
+    this.color = color;
+    this.drive = function() {console.log(`You are driving the ${color} ${year} ${make} ${model}`)}
+}
+
+const car1 = new Car("Toyota", "Camry", 2010, "white");
+
+console.log(car1.make);
+console.log(car1.model);
+console.log(car1.year);
+console.log(car1.color);
+car1.drive();
