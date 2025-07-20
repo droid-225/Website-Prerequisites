@@ -859,7 +859,7 @@ person2.greet();
 
 //Constructor
 // Special method for defining the properties and methods of objects
-
+/*
 function Car(make, model, year, color) {
     this.make = make;
     this.model = model;
@@ -875,3 +875,35 @@ console.log(car1.model);
 console.log(car1.year);
 console.log(car1.color);
 car1.drive();
+*/
+
+//Class
+// (ES6 feature) provides a more structured and cleaner way to work with objects compared to
+// tradtional constructor functions
+
+class Product {
+    constructor(name, price) {
+        this.name = name;
+        this.price = price;
+    }
+
+    displayProduct() {
+        console.log(`Product: ${this.name}`);
+        console.log(`Price: ${this.price.toFixed(2)}`);
+    } // Don't need to use function keyword inside class
+
+    calculateTotal(salesTax) {
+        return this.price + (this.price * salesTax);
+    }
+}
+
+const salesTax = 0.05;
+
+const product1 = new Product("Shirt", 19.99);
+const product2 = new Product("Pants", 29.99);
+const product3 = new Product("Socks", 9.99);
+
+product1.displayProduct();
+
+const total = product3.calculateTotal(salesTax);
+console.log(`Total Price with Tax: $${total.toFixed(2)}`);
