@@ -934,7 +934,7 @@ console.log(MathUtil.getDiameter(10)); // don't need an object to use static met
 console.log(MathUtil.getCircumference(10));
 console.log(MathUtil.getArea(10));
 */
-
+/*
 class User {
     static userCount = 0;
 
@@ -959,3 +959,63 @@ const user3 = new User("Samby");
 user1.sayHello();
 console.log(user1.userCount); // returns undefined since userCount only is available to the class and not it's objects
 User.getUserCount();
+*/
+
+//Inheritance
+
+class Animal {
+    alive = true;
+
+    eat() {
+        console.log(`This ${this.name} is eating`);
+    }
+
+    sleep() {
+        console.log(`This ${this.name} is sleeping`);
+    }
+}
+
+class Rabbit extends Animal {
+    static name = "rabbit";
+
+    run() {
+        console.log(`This ${this.name} is running!`);
+    }
+}
+
+class Fish extends Animal {
+    static name = "fish";
+
+    swim() {
+        console.log(`This ${this.name} is swimming!`);
+    }
+}
+
+class Hawk extends Animal  {
+    static name = "hawk";
+
+    fly() {
+        console.log(`This ${this.name} is flying!`);
+    }
+}
+
+const rabbit = new Rabbit();
+const fish = new Fish();
+const hawk = new Hawk();
+
+//rabbit.alive = false;
+
+console.log(rabbit.alive);
+rabbit.eat();
+rabbit.sleep();
+rabbit.run();
+
+console.log(fish.alive);
+fish.eat();
+fish.sleep();
+fish.swim();
+
+console.log(hawk.alive);
+hawk.eat();
+hawk.sleep();
+hawk.fly();
