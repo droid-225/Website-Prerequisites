@@ -880,7 +880,7 @@ car1.drive();
 //Class
 // (ES6 feature) provides a more structured and cleaner way to work with objects compared to
 // tradtional constructor functions
-
+/*
 class Product {
     constructor(name, price) {
         this.name = name;
@@ -907,3 +907,55 @@ product1.displayProduct();
 
 const total = product3.calculateTotal(salesTax);
 console.log(`Total Price with Tax: $${total.toFixed(2)}`);
+*/
+
+//static
+// keyword that defines properties or methods that belong to a class itself rather than the objects
+// created from that class
+/*
+class MathUtil {
+    static PI = 3.14159;
+
+    static getDiameter(radius) {
+        return radius * 2;
+    }
+
+    static getCircumference(radius) {
+        return 2 * this.PI * radius;
+    }
+
+    static getArea(radius) {
+        return this.PI * radius * radius;
+    }
+}
+
+console.log(MathUtil.PI); // don't need an object to get this property
+console.log(MathUtil.getDiameter(10)); // don't need an object to use static methods
+console.log(MathUtil.getCircumference(10));
+console.log(MathUtil.getArea(10));
+*/
+
+class User {
+    static userCount = 0;
+
+    constructor(username) {
+        this.username = username;
+        User.userCount++;
+    }
+
+    static getUserCount() {
+        console.log(`There are ${User.userCount} users online.`);
+    }
+
+    sayHello() {
+        console.log(`Hello! My username is ${this.username}`);
+    }
+}
+
+const user1 = new User("Spoingbob");
+const user2 = new User("Pabrick");
+const user3 = new User("Samby");
+
+user1.sayHello();
+console.log(user1.userCount); // returns undefined since userCount only is available to the class and not it's objects
+User.getUserCount();
