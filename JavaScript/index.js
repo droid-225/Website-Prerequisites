@@ -1024,7 +1024,7 @@ hawk.fly();
 //super
 // keyword used in classes to call the constructor or access the properties 
 // and methods of a parent / super class
-
+/*
 class Animal {
     constructor(name, age) {
         this.name = name;
@@ -1088,3 +1088,52 @@ console.log(hawk.name);
 console.log(hawk.age);
 console.log(hawk.flySpeed);
 hawk.fly();
+*/
+
+//Getters and Setters
+
+class Rectangle {
+    constructor(width, height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    set width(newWidth) {
+        if(newWidth > 0) {
+            this._width = newWidth; // here _width means that width is a private property
+        }
+        else {
+            console.error("Width must be a positive number");
+        }
+    }
+
+    set height(newHeight) {
+        if(newHeight > 0 && typeof newHeight === "number") {
+            this._height = newHeight; // here _width means that width is a private property
+        } // the typeof check is not really necessary in practice, just for reference here
+        else {
+            console.error("Width must be a positive number");
+        }
+    }
+
+    get width() {
+        return this._width.toFixed(1);
+    }
+
+    get height() {
+        return this._height.toFixed(1);
+    }
+
+    get area() {
+        return (this._width * this._height).toFixed(1);
+    } // get method allows you to get values that are not prespecified variables as if they were variables
+} 
+
+const rectangle = new Rectangle(4, 5);
+
+rectangle.width = 5;
+rectangle.height = 6;
+
+console.log(rectangle.width);
+console.log(rectangle.height);
+console.log(rectangle.area);
