@@ -1091,7 +1091,7 @@ hawk.fly();
 */
 
 //Getters and Setters
-
+/*
 class Rectangle {
     constructor(width, height) {
         this.width = width;
@@ -1137,3 +1137,70 @@ rectangle.height = 6;
 console.log(rectangle.width);
 console.log(rectangle.height);
 console.log(rectangle.area);
+*/
+
+//Destructuring
+// Extracts values from arrays and objects, then assign them to variables in a easy way
+// [] used to perform array destructuring
+// {} used to perform object destructuring
+/*
+// Example 1: Swaping variables
+let a = 1;
+let b = 2;
+
+[a, b] = [b, a]; // LHS [a, b] uses destructuring and RHS makes an array containing b then a
+
+console.log(a);
+console.log(b);
+*/
+/*
+// Example 2: Swaping elements in array
+const colors = ["red", "green", "blue", "black", "white"];
+
+[colors[0], colors[4]] = [colors[4], colors[0]];
+
+//console.log(colors);
+
+// Example 3: Assigning array elements to variables
+
+const [firstColor, secondColor, thirdColor, ...extraColors] = colors; 
+// Here the rest parameter (...) is used to store remaining colors in another array called 'extraColors'
+
+console.log(firstColor);
+console.log(secondColor);
+console.log(thirdColor);
+console.log(extraColors);
+*/
+
+// Example 4: Extract values from objects
+
+const person1 = {
+    firstName: "Spongebob",
+    lastName: "Squarepants",
+    age: 30,
+    job: "Fry Cook",
+}
+
+const person2 = {
+    firstName: "Patrcik",
+    lastName: "Star",
+    age: 30,
+}
+
+const {firstName, lastName, age, job="Unemployed"} = person2; // "Unemployed" here is a default value
+// names of destrucutred variables need to be same as those in the objects
+/*
+console.log(firstName);
+console.log(lastName);
+console.log(age);
+console.log(job);
+*/
+// Example 5: Destructure in function parameters
+
+function displayPerson({firstName, lastName, age, job="Unemployed"}) {
+    console.log(`Name: ${firstName} ${lastName}`);
+    console.log(`Age: ${age}`);
+    console.log(`Job: ${job}`);
+}
+
+displayPerson(person2);
