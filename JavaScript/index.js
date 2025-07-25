@@ -1173,7 +1173,7 @@ console.log(extraColors);
 */
 
 // Example 4: Extract values from objects
-
+/*
 const person1 = {
     firstName: "Spongebob",
     lastName: "Squarepants",
@@ -1195,8 +1195,9 @@ console.log(lastName);
 console.log(age);
 console.log(job);
 */
-// Example 5: Destructure in function parameters
 
+// Example 5: Destructure in function parameters
+/*
 function displayPerson({firstName, lastName, age, job="Unemployed"}) {
     console.log(`Name: ${firstName} ${lastName}`);
     console.log(`Age: ${age}`);
@@ -1204,3 +1205,61 @@ function displayPerson({firstName, lastName, age, job="Unemployed"}) {
 }
 
 displayPerson(person2);
+*/
+
+//Nested Objects
+// Objects in objects
+/*
+const person = {
+    fullName: "Spongebob Squarepants",
+    age: 30,
+    isStudent: true,
+    hobbies: ["Karate", "Jellyfishing", "Cooking"],
+    address: {
+        street: "124 Conch Street",
+        city: "Bikini Bottom",
+        country: "Int. Waters"
+    }
+}
+
+console.log(person.fullName);
+console.log(person.age);
+console.log(person.isStudent);
+console.log(person.hobbies);
+//console.log(person.address.street);
+//console.log(person.address.city);
+//console.log(person.address.country);
+for(const property in person.address) {
+    console.log(person.address[property]);
+}
+*/
+
+class Person {
+    constructor(name, age, ...address) {
+        this.name = name;
+        this.age = age;
+        this.address = new Address(...address);
+    }
+}
+
+class Address {
+    constructor(street, city, country) {
+        this.street = street;
+        this.city = city;
+        this.country = country;
+    }
+}
+
+const person1 = new Person("Spongebob", 30, "124 Conch St.", 
+                                            "Bikini Bottom", 
+                                            "Int. Waters");
+
+const person2 = new Person("Patrick", 30, "128 Conch St.", 
+                                            "Bikini Bottom", 
+                                            "Int. Waters");
+
+const person3 = new Person("Squidward", 45, "126 Conch St.", 
+                                            "Bikini Bottom", 
+                                            "Int. Waters");
+
+console.log(person3.address.street);
