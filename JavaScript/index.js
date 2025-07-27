@@ -1266,7 +1266,7 @@ console.log(person3.address.street);
 */
 
 //Array of Objects
-
+/*
 const fruits = [
     {name: "apple", color: "red", calories: 95},
     {name: "orange", color: "orange", calories: 45},
@@ -1278,7 +1278,7 @@ const fruits = [
 fruits.push({name: "grapes", color: "purple", calories: 62});
 fruits.pop();
 //fruits.splice(1, 2);
-
+*/
 //console.log(fruits);
 //fruits.forEach(fruit => console.log(fruit));
 /*
@@ -1297,8 +1297,34 @@ const lowCalFruits = fruits.filter(fruit => fruit.calories < 100);
 console.log(yellowFruits);
 console.log(lowCalFruits);
 */
-
+/*
 const maxFruit = fruits.reduce((max, fruit) => 
                                 fruit.calories > max.calories ? fruit : max);
 
 console.log(maxFruit);
+*/
+
+//sort
+// Method used to sort elements of an array in place.
+// Sorts elements as strings in lexicographic (alphabet, numbers, symbols) order
+// Treats all values as strings by default
+/*
+let fruits = ["apple", "oragne", "banana", "coconut", "pineaple"];
+let number = [1, 3, 5, 7, 4, 10, 9, 8, 6, 2];
+fruits.sort();
+number.sort((a, b) => a - b); // ascending order (flip a and b for descending)
+
+console.log(number);
+*/
+
+const people = [
+    {name: "Spongebob", age: 30, gpa: 3.0},
+    {name: "Patrick", age: 32, gpa: 1.5},
+    {name: "Squidward", age: 40, gpa: 3.5},
+    {name: "Sandy", age: 27, gpa: 4.0}
+];
+
+//people.sort((a, b) => a.age - b.age);
+people.sort((a, b) => a.name.localeCompare(b.name)); // used to sort strings in alphabetical order
+
+console.log(people);
