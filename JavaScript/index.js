@@ -1384,10 +1384,83 @@ console.log(seconds);
 console.log(miliseconds);
 console.log(dayOfWeek);
 */
-
+/*
 const date1 = new Date("2023-12-31");
 const date2 = new Date("2024-01-01");
 
 if(date2 > date1) {
     console.log("Happy New Year!");
 }
+*/
+
+//Closure
+// A function defined inside of another function, the inner function can access the variables 
+// and scope of the outer function. Allow for private variables and state maintentance
+// Used frequently in React, Vue, and Angular
+/*
+function outer() {
+    let message = "Hello";
+
+    function inner() {
+        console.log(message);
+    }
+
+    inner();
+}
+
+outer();
+*/
+/*
+function createCounter() {
+    let count = 0;
+ 
+    function increment() {
+        count++;
+        console.log(`Count increased to ${count}`);
+    }
+
+    function getCount() {
+        return count;
+    }
+
+    //return {increment}; // Same as return {increment:increment}, returns object with increment function
+    return {increment, getCount};
+}
+
+const counter = createCounter();
+
+counter.increment();
+counter.increment();
+counter.increment();
+counter.increment();
+counter.increment();
+
+console.log(`The current count is: ${counter.getCount()}`);
+*/
+
+function createGame() {
+    let score = 0;
+
+    function increaseScore(points) {
+        score += points;
+        console.log(`+${points}pts`);
+    }
+
+    function decreaseScore(points) {
+        score -= points;
+        console.log(`-${points}pts`);
+    }
+
+    function getScore() {
+        return score;
+    }
+
+    return {increaseScore, decreaseScore, getScore};
+}
+
+const game = createGame();
+
+game.increaseScore(5);
+game.increaseScore(6);
+game.decreaseScore(3);
+console.log(`The final score is ${game.getScore()}pts`);
