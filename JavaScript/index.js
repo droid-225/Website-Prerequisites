@@ -1587,7 +1587,7 @@ console.log(`${volume.toFixed(2)} cm^3`);
 // Asynchronous code allows multiple operations to be performed concurrently without waiting.
 // (I/O operations, network, requests, fetching data)
 // Handled with: Callbacks, Promises, Asynch/Await
-
+/*
 function func1(callback) {
     setTimeout(() => {console.log("Task 1");
                       callback();}, 3000); // setTimeout is an asynchronous function
@@ -1600,3 +1600,47 @@ function func2() {
 }
 
 func1(func2); // executes function 2 only after function 1 is complete
+*/
+
+//Error Handling
+// Error is an object that is created to represent problems that occur.
+// Usually occur with user input or establishing connections.
+// Network Errors
+// Promise Errors
+// Security Errors
+// try{} catch{} finally{}
+/*
+try {
+    console.lag("Hello");
+}
+catch(error) {
+    console.error(error); // console.log can be used, but .error highlights errors better
+}
+finally {
+    // optional, always executes, even if an error does not occur
+    // used for cleanup, closing files, closing connections, or releasing resources
+    console.log("This always executes!");
+}
+
+console.log("You have reached the end!");
+*/
+
+try {
+    const dividend = Number(window.prompt("Enter a dividend: "));
+    const divisor = Number(window.prompt("Enter a divisor: "));
+
+    if(divisor == 0) {
+        throw new Error("You can't divide by 0!");
+    }
+    if(isNaN(dividend) || isNaN(divisor)) {
+        throw new Error("Values must be a number!");
+    }
+
+    const result = dividend / divisor;
+    console.log(result);
+}
+catch(error) {
+    console.log(error);
+}
+
+console.log("You have reached the end!");
