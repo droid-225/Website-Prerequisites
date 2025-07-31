@@ -1,26 +1,68 @@
 body {
-    margin: 0;
-    background-image: url(images/background.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed; /*background stays in place if scrolled down on page*/
-}
-
-#clock-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
-    /*border: 2px solid;*/
+    background-color: rgb(177, 204, 212);
 }
 
-#clock {
+#myH1 {
+    font-size: 4rem;
+    font-family: "Arial", sans-serif;
+    color: rgb(68, 66, 66);
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    border: 5px solid;
+    border-radius: 50px;
+    background-color: white;
+}
+
+#display {
+    font-size: 4rem;
     font-family: monospace;
-    font-size: 2rem;
-    text-align: center;
+    color: rgb(68, 66, 66);
+    text-shadow: 2px 2px 2px hsla(0, 0%, 0%, 0.75);
+    margin-bottom: 25px;
+}
+
+#controls button{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 5px;
+    min-width: 125px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
     color: white;
-    backdrop-filter: blur(2px);
-    width: 100%;
-    background-color: rgba(113, 150, 157, 0.2);
+    transition: background-color 0.5s ease;
+    box-shadow: 2px 2px 5px black;
+}
+
+#startBtn {
+    background-color: rgb(63, 196, 63);
+}
+
+#startBtn:hover {
+   background-color: rgb(21, 220, 21); 
+}
+
+#stopBtn {
+    background-color: rgb(233, 48, 66);
+}
+
+#stopBtn:hover {
+   background-color: rgb(249, 4, 13); 
+}
+
+#resetBtn {
+    background-color: rgb(48, 171, 233);
+}
+
+#resetBtn:hover {
+   background-color: rgb(4, 200, 249); 
 }

@@ -8,9 +8,20 @@
     </head>
 
     <body>
-        <div id="clock-container">
-            <div id="clock">00:00:00</div>
+       <h1 id="myH1">Stopwatch</h1>
+
+        <div id="container">
+            <div id="display">
+                00:00:00:00
+            </div>
+            <div id="controls">
+                <button id="startBtn" onclick="start()">Start</button>
+                <button id="stopBtn" onclick="stop()">Stop</button>
+                <button id="resetBtn" onclick="reset()">Reset</button>
+            </div>
         </div>
+        
+
         <!--always keep script element last to avoid JS errors affecting website visuals-->
         <script src="index.js"></script>
     </body>
