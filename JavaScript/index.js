@@ -1568,7 +1568,7 @@ function update() {
 //ES6 Module
 // An external file that contains reusable code that can be imported into other JS files.
 // Can contain variables, classes, functions, etc.
-
+/*
 import {PI, getCircumference, getArea, getVolume} from './mathUtil.js';
 
 console.log(PI);
@@ -1579,3 +1579,24 @@ const volume = getVolume(10);
 console.log(`${circumference.toFixed(2)} cm`);
 console.log(`${area.toFixed(2)} cm^2`);
 console.log(`${volume.toFixed(2)} cm^3`);
+*/
+
+//Asynchronous Code
+// Synchronous code executes line by line consecutively in a sequential manner.
+// This code waits for previous operations to complete execution.
+// Asynchronous code allows multiple operations to be performed concurrently without waiting.
+// (I/O operations, network, requests, fetching data)
+// Handled with: Callbacks, Promises, Asynch/Await
+
+function func1(callback) {
+    setTimeout(() => {console.log("Task 1");
+                      callback();}, 3000); // setTimeout is an asynchronous function
+}
+
+function func2() {
+    console.log("Task 2");
+    console.log("Task 3");
+    console.log("Task 4");
+}
+
+func1(func2); // executes function 2 only after function 1 is complete
