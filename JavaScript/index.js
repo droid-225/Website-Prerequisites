@@ -1516,7 +1516,7 @@ setInterval(updateClock, 1000);
 */
 
 //Stopwatch Program
-
+/*
 const display = document.getElementById("display");
 let timer = null;
 let startTime = 0;
@@ -1563,3 +1563,19 @@ function update() {
 
     display.textContent = `${hours}:${minutes}:${seconds}:${miliseconds}`;
 }
+*/
+
+//ES6 Module
+// An external file that contains reusable code that can be imported into other JS files.
+// Can contain variables, classes, functions, etc.
+
+import {PI, getCircumference, getArea, getVolume} from './mathUtil.js';
+
+console.log(PI);
+const circumference = getCircumference(10);
+const area = getArea(10);
+const volume = getVolume(10);
+
+console.log(`${circumference.toFixed(2)} cm`);
+console.log(`${area.toFixed(2)} cm^2`);
+console.log(`${volume.toFixed(2)} cm^3`);
