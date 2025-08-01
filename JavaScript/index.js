@@ -1624,7 +1624,7 @@ finally {
 
 console.log("You have reached the end!");
 */
-
+/*
 try {
     const dividend = Number(window.prompt("Enter a dividend: "));
     const divisor = Number(window.prompt("Enter a divisor: "));
@@ -1644,3 +1644,25 @@ catch(error) {
 }
 
 console.log("You have reached the end!");
+*/
+
+//Calculator Program
+
+const display = document.getElementById("display");
+
+function appendToDisplay(input) {
+    display.value += input;
+}
+
+function clearDisplay() {
+    display.value = "";
+}
+
+function calculate() {
+    try {
+        display.value = eval(display.value); // DO NOT USE THIS SHIT IN REAL LIFE, IT CAN BE USED AS A BACKDOOR
+    }
+    catch {
+        display.value = "Error";
+    }
+}
