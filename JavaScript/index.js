@@ -1742,7 +1742,7 @@ const element = document.querySelector(".fruits");
 
 element.style.backgroundColor = "yellow";
 */
-
+/*
 const fruits = document.querySelectorAll(".fruits");
 const foods = document.querySelectorAll("li");
 
@@ -1752,3 +1752,53 @@ foods.forEach(food => {
 }); // Nodelists have forEach built in
 
 console.log(foods);
+*/
+
+//DOM Navigation
+// The process of navigating through the sturcture of an HTML document using JS.
+// .firstElementChild
+// .lastElementChild
+// .previousElementSibling
+// .parentElement
+// .children
+
+//const element = document.getElementById("fruits");
+//const firstChild = element.firstElementChild;
+//const ulElements = document.querySelectorAll("ul");
+
+//firstChild.style.backgroundColor = "yellow";
+/*
+ulElements.forEach(ulElement => {
+    const firstChild = ulElement.firstElementChild;
+    firstChild.style.backgroundColor = "yellow";
+});
+*/
+/*
+ulElements.forEach(ulElement => {
+    const lastChild = ulElement.lastElementChild;
+    lastChild.style.backgroundColor = "yellow";
+});
+*/
+/*
+const element = document.getElementById("vegtables");
+const nextSibling = element.nextElementSibling;
+const previousSibling = element.previousElementSibling; // both next and previous sibling do not loop
+
+//nextSibling.style.backgroundColor = "yellow";
+previousSibling.style.background = "yellow";
+*/
+/*
+const element = document.getElementById("apple");
+const parent = element.parentElement;
+
+parent.style.backgroundColor = "yellow";
+*/
+
+const element = document.getElementById("fruits");
+const children = element.children; // returns HTML collection
+
+Array.from(children).forEach(child => {
+    child.style.backgroundColor = "yellow";
+}); // can also access using index numbers
+
+//console.log(children);
