@@ -1679,8 +1679,76 @@ function calculate() {
 
 //document.title = "My Website";
 //document.body.style.backgroundColor = "hsl(0, 0%, 15%)";
-
+/*
 const username = "Bro";
 const welcomeMsg = document.getElementById("welcome-msg");
 
 welcomeMsg.textContent += username === "" ? `Guest` : username;
+*/
+
+//Element Selectors
+// Methods used to target and manipulate HTML elements.
+// They allow you to select one or multiple HTML elements from the DOM
+// Selector                     Returns
+// .getElementById()            Element or NULL (if element not found)
+// .getElementsByClassName()    HTML Collection
+// .getElementsByTagName()      HTML Collection
+// .querySelector()             First Element or NULL
+// .querySelectorAll()          Nodelist
+
+/*
+const myHeading = document.getElementById("my-heading");
+
+myHeading.style.backgroundColor = "yellow";
+myHeading.style.textAlign = "center";
+
+console.log(myHeading);
+*/
+
+//const fruits = document.getElementsByClassName("fruits");
+
+//fruits[0].style.backgroundColor = "yellow"; 
+//fruits[0].textContent = "Kiwi";
+
+/*
+for(let fruit of fruits) {
+    fruit.style.backgroundColor = "yellow";
+}
+*/
+/*
+Array.from(fruits).forEach(fruit => {
+    fruit.style.backgroundColor = "yellow";
+});
+*/
+// HTML collections don't have many built in functions, so to use array functions like forEach,
+// it needs to be type cast as an array first
+
+//console.log(fruits);
+/*
+const h4Elements = document.getElementsByTagName("h4");
+const liElements = document.getElementsByTagName("li");
+
+for(let h4Element of h4Elements) {
+    h4Element.style.backgroundColor = "yellow";
+}
+
+for(let liElement of liElements) {
+    liElement.style.backgroundColor = "lightgreen";
+}
+*/
+//console.log(h4Elements);
+/*
+const element = document.querySelector(".fruits");
+
+element.style.backgroundColor = "yellow";
+*/
+
+const fruits = document.querySelectorAll(".fruits");
+const foods = document.querySelectorAll("li");
+
+//fruits[0].style.backgroundColor = "yellow";
+foods.forEach(food => {
+    food.style.backgroundColor = "yellow";
+}); // Nodelists have forEach built in
+
+console.log(foods);
