@@ -1793,7 +1793,7 @@ const parent = element.parentElement;
 
 parent.style.backgroundColor = "yellow";
 */
-
+/*
 const element = document.getElementById("fruits");
 const children = element.children; // returns HTML collection
 
@@ -1802,3 +1802,57 @@ Array.from(children).forEach(child => {
 }); // can also access using index numbers
 
 //console.log(children);
+*/
+
+//Add & Change HTML
+
+// Step 1: Create the element
+
+//const newH1 = document.createElement("h1");
+const newListItem = document.createElement("li");
+
+// Step 2: Add attributes/properties
+/*
+newH1.textContent = "Hello!";
+newH1.id = "myH1";
+newH1.style.color = "tomato";
+newH1.style.textAlign = "center";
+*/
+
+newListItem.textContent = "pear";
+newListItem.id = "pear";
+newListItem.style.fontWeight = "bold";
+newListItem.style.backgroundColor = "lightgreen";
+
+// Step 3: Append the element to DOM
+
+//document.body.append(newH1); // append adds to the end, makes it the last child
+//document.body.prepend(newH1); // prepend adds to the top, makes it the first child
+//document.getElementById("box1").append(newH1);
+//document.getElementById("box1").prepend(newH1);
+
+//const box2 = document.getElementById("box2");
+//document.body.insertBefore(newH1, box2); // insertBefore(newElement, oldElement), moves old element down and puts new element in its place
+
+//const boxes = document.querySelectorAll(".box"); // creates nodelist of boxes
+//document.body.insertBefore(newH1, boxes[1]); // usefull when an id is not given to each child in a class
+
+//document.body.append(newListItem);
+//document.body.prepend(newListItem);
+//document.getElementById("fruits").append(newListItem);
+//document.getElementById("fruits").prepend(newListItem);
+
+//const orange = document.getElementById("orange");
+//document.getElementById("fruits").insertBefore(newListItem, orange); 
+// Turns out chromium browsers automatically make global variables for elements with and without an ID
+// in its DevTools, so just putting the id of the variable technically works, but only for testing purposes
+// and only on chromium based browsers. 
+
+const fruitslist = document.querySelectorAll("#fruits li");
+document.getElementById("fruits").insertBefore(newListItem, fruitslist[2]);
+
+// Remove HTML Element
+
+//document.body.removeChild(newH1);
+//document.getElementById("box1").removeChild(newH1); // when element to be removed is not directly in another element
+//document.getElementById("fruits").removeChild(newListItem);
