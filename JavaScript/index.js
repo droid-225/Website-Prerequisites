@@ -1809,7 +1809,7 @@ Array.from(children).forEach(child => {
 // Step 1: Create the element
 
 //const newH1 = document.createElement("h1");
-const newListItem = document.createElement("li");
+//const newListItem = document.createElement("li");
 
 // Step 2: Add attributes/properties
 /*
@@ -1818,12 +1818,12 @@ newH1.id = "myH1";
 newH1.style.color = "tomato";
 newH1.style.textAlign = "center";
 */
-
+/*
 newListItem.textContent = "pear";
 newListItem.id = "pear";
 newListItem.style.fontWeight = "bold";
 newListItem.style.backgroundColor = "lightgreen";
-
+*/
 // Step 3: Append the element to DOM
 
 //document.body.append(newH1); // append adds to the end, makes it the last child
@@ -1847,12 +1847,74 @@ newListItem.style.backgroundColor = "lightgreen";
 // Turns out chromium browsers automatically make global variables for elements with and without an ID
 // in its DevTools, so just putting the id of the variable technically works, but only for testing purposes
 // and only on chromium based browsers. 
-
+/*
 const fruitslist = document.querySelectorAll("#fruits li");
 document.getElementById("fruits").insertBefore(newListItem, fruitslist[2]);
-
+*/
 // Remove HTML Element
 
 //document.body.removeChild(newH1);
 //document.getElementById("box1").removeChild(newH1); // when element to be removed is not directly in another element
 //document.getElementById("fruits").removeChild(newListItem);
+
+//Mouse Events
+// eventListener: listens for specific events to create interactive web pages
+// events include click, mouseover, mouseout, etc.
+// Syntax: .addEventListener(event, callback);
+// Emoji Shortcut: Start Key + . (period)
+
+const myBox = document.getElementById("myBox");
+const myButton = document.getElementById("myButton");
+
+/*
+function changeColor(event) {
+    //event object is automatially returned by the browser when something happens
+    //console.log(event);
+
+    event.target.style.backgroundColor = "tomato";
+    event.target.textContent = "You Clicked Me! 🫠";
+}
+*/
+/*
+myBox.addEventListener("click", function(event) {
+    event.target.style.backgroundColor = "tomato";
+    event.target.textContent = "You Clicked Me! 🫠";
+});
+*/
+/*
+myBox.addEventListener("click", event => {
+    event.target.style.backgroundColor = "tomato";
+    event.target.textContent = "You Clicked Me! 🫠";
+});
+
+myBox.addEventListener("mouseover", event => {
+    event.target.style.backgroundColor = "pink";
+    event.target.textContent = "YES CLICK ME! 👼🏿";
+});
+
+myBox.addEventListener("mouseout", event => {
+    event.target.style.backgroundColor = "lightgreen";
+    event.target.textContent = "Click Me! 😊";
+});
+*/
+
+myButton.addEventListener("click", event => {
+    //event.target.style.backgroundColor = "tomato";
+    //event.target.textContent = "You Clicked Me! 🫠";
+    myBox.style.backgroundColor = "tomato";
+    myBox.textContent = "You Clicked Me! 🫠";
+});
+
+myButton.addEventListener("mouseover", event => {
+    //event.target.style.backgroundColor = "pink";
+    //event.target.textContent = "YES CLICK ME! 👼🏿";
+    myBox.style.backgroundColor = "pink";
+    myBox.textContent = "YES CLICK ME! 👼🏿";
+});
+
+myButton.addEventListener("mouseout", event => {
+    //event.target.style.backgroundColor = "lightgreen";
+    //event.target.textContent = "Click Me! 😊";
+    myBox.style.backgroundColor = "lightgreen";
+    myBox.textContent = "Click Me! 😊";
+});
