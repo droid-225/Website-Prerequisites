@@ -1863,8 +1863,8 @@ document.getElementById("fruits").insertBefore(newListItem, fruitslist[2]);
 // Syntax: .addEventListener(event, callback);
 // Emoji Shortcut: Start Key + . (period)
 
-const myBox = document.getElementById("myBox");
-const myButton = document.getElementById("myButton");
+//const myBox = document.getElementById("myBox");
+//const myButton = document.getElementById("myButton");
 
 /*
 function changeColor(event) {
@@ -1897,7 +1897,7 @@ myBox.addEventListener("mouseout", event => {
     event.target.textContent = "Click Me! 😊";
 });
 */
-
+/*
 myButton.addEventListener("click", event => {
     //event.target.style.backgroundColor = "tomato";
     //event.target.textContent = "You Clicked Me! 🫠";
@@ -1917,4 +1917,50 @@ myButton.addEventListener("mouseout", event => {
     //event.target.textContent = "Click Me! 😊";
     myBox.style.backgroundColor = "lightgreen";
     myBox.textContent = "Click Me! 😊";
+});
+*/
+
+//Key Events
+// events: keydown, keyup [DO NOT USE keypress]
+
+const myBox = document.getElementById("myBox");
+const movementAmount = 10;
+let x = 0;
+let y = 0;
+
+document.addEventListener("keydown", event => {
+    //console.log(`Key Down: ${event.key}`);
+    myBox.textContent = "😥";
+    myBox.style.backgroundColor = "tomato";
+});
+
+document.addEventListener("keyup", event => {
+    //console.log(`Key Up: ${event.key}`);
+    myBox.textContent = "🦦";
+    myBox.style.backgroundColor = "lightgreen";
+});
+
+document.addEventListener("keydown", event => {
+
+    if(event.key.startsWith("Arrow")) {
+        event.preventDefault(); // lets the element move off screen without us following it
+
+        switch(event.key) {
+            case "ArrowUp":
+                y -= movementAmount;
+                break;
+            case "ArrowDown":
+                y += movementAmount;
+                break;
+            case "ArrowLeft":
+                x -= movementAmount;
+                break;
+            case "ArrowRight":
+                x += movementAmount;
+                break;
+        }
+
+        myBox.style.top = `${y}px`;
+        myBox.style.left = `${x}px`;
+    }
 });
