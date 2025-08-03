@@ -1,26 +1,52 @@
-#myH1 {
-    font-size: 5rem;
-}
-
-#myButton, .myButtons {
-    font-size: 4rem;
-    margin: 10px;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-}
-
-.enabled {
-    background-color: rgb(39, 215, 39);
-    color: white;
-}
-
-.hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.20);
+body {
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
+    margin: body;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.disabled {
-    background-color: hsl(0, 0%, 60%);
-    color: hsl(0, 0%, 80%);
+h1 {
+    font-size: 2.5rem;
+    color: hsl(0, 0%, 20%);
+}
+
+.choices {
+    margin-bottom: 30px;
+}
+
+.choices button {
+    font-size: 5.5rem;
+    min-width: 100px;
+    margin: 0 10px;
+    border-radius: 200px;
+    background-color: hsla(117, 80%, 51%, 0.45);
+    cursor: pointer;
+    transform: background-color 0.5s ease;
+}
+
+.choices button:hover {
+    background-color: hsla(117, 80%, 51%, 0.65);
+}
+
+#playerDisplay, #compDisplay {
+    font-size: 2.5rem;
+}
+
+#resultDisplay {
+    font-size: 5rem;
+    margin: 30px 0;
+}
+
+.scoreDisplay {
+    font-size: 2rem;
+}
+
+.greenText, #playerScoreDisplay {
+    color: rgb(25, 235, 25);
+}
+
+.redText, #compScoreDisplay {
+    color: red;
 }

@@ -8,15 +8,25 @@
     </head>
 
     <body>
-        <!--
-        <h1 id="myH1">Hello</h1>
-        <button id="myButton">My Button</button>
-        -->
+        <h1>Rock! Paper! Scissors!</h1>
 
-        <button class="myButtons">Button 1</button>
-        <button class="myButtons">Button 2</button>
-        <button class="myButtons">Button 3</button>
-        <button class="myButtons">Button 4</button>
+        <div class="choices">
+            <button onclick="playGame('rock')">🪨</button>
+            <button onclick="playGame('paper')">📄</button>
+            <button onclick="playGame('scissors')">✂️</button>
+        </div>
+
+        <div id="playerDisplay">Player:</div>
+        <div id="compDisplay">Computer:</div>
+        <div id="resultDisplay"></div>
+
+        <div class="scoreDisplay">Player Score: 
+            <span id="playerScoreDisplay">0</span>
+        </div>
+
+        <div class="scoreDisplay">Computer Score: 
+            <span id="compScoreDisplay">0</span>
+        </div>
 
         <!--always keep script element last to avoid JS errors affecting website visuals-->
         <script src="index.js"></script>
