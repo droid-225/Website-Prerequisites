@@ -1967,17 +1967,17 @@ document.addEventListener("keydown", event => {
 */
 
 //Show / Hide HTML
-
+/*
 const myButton = document.getElementById("myButton");
 const myImg = document.getElementById("myImg");
 
 myButton.addEventListener("click", event => {
-    /*
-    if(myImg.style.display === "none") {
-        myImg.style.display = "block";
-        myButton.textContent = "Hide";
-    }
-    */
+    
+    //if(myImg.style.display === "none") {
+    //    myImg.style.display = "block";
+    //    myButton.textContent = "Hide";
+    //}
+    
    if(myImg.style.visibility === "hidden") {
         myImg.style.visibility = "visible";
         myButton.textContent = "Hide";
@@ -1988,3 +1988,59 @@ myButton.addEventListener("click", event => {
         myButton.textContent = "Show";
     }
 });
+*/
+
+//Nodelists
+// Static collection of HTML elements by (id, class, element). Can be created by using
+// querySelectorAll(). Similar to an array, but no (map, filter, reduce).
+// Nodelist won't update to automatically reflect changes
+
+let buttons = document.querySelectorAll(".myButtons");
+
+// Add new element
+
+const newButton = document.createElement("button");
+newButton.textContent = "Button 5"
+newButton.classList = "myButtons";
+document.body.appendChild(newButton);
+
+buttons = document.querySelectorAll(".myButtons");
+
+// Add HTML/CSS Properties
+
+buttons.forEach(button => {
+    button.style.backgroundColor = "forestgreen";
+    button.textContent += '🐱'
+});
+
+// Click event listener
+/*
+buttons.forEach(button => {
+    button.addEventListener("click", event => {
+        event.target.style.backgroundColor = "tomato";
+    });
+});
+*/
+// Mouseover + mouseout listener
+
+buttons.forEach(button => {
+    button.addEventListener("mouseover", event => {
+        event.target.style.backgroundColor = "lightgreen";
+    });
+
+    button.addEventListener("mouseout", event => {
+        event.target.style.backgroundColor = "forestgreen";
+    });
+})
+
+// Remove an element
+
+buttons.forEach(button => {
+    button.addEventListener("click", event => {
+        event.target.remove(); // only removes it from DOM
+        buttons = document.querySelectorAll(".myButtons"); // updates nodelist
+        console.log(buttons);
+    });
+});
+
+//console.log(buttons);
