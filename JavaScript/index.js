@@ -1922,7 +1922,7 @@ myButton.addEventListener("mouseout", event => {
 
 //Key Events
 // events: keydown, keyup [DO NOT USE keypress]
-
+/*
 const myBox = document.getElementById("myBox");
 const movementAmount = 10;
 let x = 0;
@@ -1962,5 +1962,29 @@ document.addEventListener("keydown", event => {
 
         myBox.style.top = `${y}px`;
         myBox.style.left = `${x}px`;
+    }
+});
+*/
+
+//Show / Hide HTML
+
+const myButton = document.getElementById("myButton");
+const myImg = document.getElementById("myImg");
+
+myButton.addEventListener("click", event => {
+    /*
+    if(myImg.style.display === "none") {
+        myImg.style.display = "block";
+        myButton.textContent = "Hide";
+    }
+    */
+   if(myImg.style.visibility === "hidden") {
+        myImg.style.visibility = "visible";
+        myButton.textContent = "Hide";
+    }
+    else {
+        //myImg.style.display = "none"; // does not save the space of the image
+        myImg.style.visibility = "hidden";
+        myButton.textContent = "Show";
     }
 });
