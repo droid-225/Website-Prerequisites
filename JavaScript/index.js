@@ -1995,24 +1995,24 @@ myButton.addEventListener("click", event => {
 // querySelectorAll(). Similar to an array, but no (map, filter, reduce).
 // Nodelist won't update to automatically reflect changes
 
-let buttons = document.querySelectorAll(".myButtons");
+//let buttons = document.querySelectorAll(".myButtons");
 
 // Add new element
-
+/*
 const newButton = document.createElement("button");
 newButton.textContent = "Button 5"
 newButton.classList = "myButtons";
 document.body.appendChild(newButton);
 
 buttons = document.querySelectorAll(".myButtons");
-
+*/
 // Add HTML/CSS Properties
-
+/*
 buttons.forEach(button => {
     button.style.backgroundColor = "forestgreen";
     button.textContent += '🐱'
 });
-
+*/
 // Click event listener
 /*
 buttons.forEach(button => {
@@ -2022,7 +2022,7 @@ buttons.forEach(button => {
 });
 */
 // Mouseover + mouseout listener
-
+/*
 buttons.forEach(button => {
     button.addEventListener("mouseover", event => {
         event.target.style.backgroundColor = "lightgreen";
@@ -2032,9 +2032,9 @@ buttons.forEach(button => {
         event.target.style.backgroundColor = "forestgreen";
     });
 })
-
+*/
 // Remove an element
-
+/*
 buttons.forEach(button => {
     button.addEventListener("click", event => {
         event.target.remove(); // only removes it from DOM
@@ -2042,5 +2042,87 @@ buttons.forEach(button => {
         console.log(buttons);
     });
 });
-
+*/
 //console.log(buttons);
+
+//classList
+// Element property in JS used to interact with an element's list of classes (CSS classes).
+// Allows you to make reusable classes for many elements across your webpage.
+// add()
+// remove()
+// toggle(remove if present, add if not present)
+// repalce(oldClass, newClass)
+// contains()
+
+//const myH1 = document.getElementById("myH1");
+//const myButton = document.getElementById("myButton");
+
+//myButton.classList.add("enabled");
+//myButton.classList.remove("enabled");
+
+/*
+myButton.addEventListener("mouseover", event => {
+    event.target.classList.toggle("hover");
+});
+
+myButton.addEventListener("mouseout", event => {
+    event.target.classList.toggle("hover");
+});
+*/
+/*
+myH1.classList.add("enabled");
+myButton.classList.add("enabled");
+
+myH1.addEventListener("click", event => {
+    if(event.target.classList.contains("disabled")){
+        event.target.textContent += "🥵";
+    }
+    else {
+        event.target.classList.replace("enabled", "disabled");
+    }
+});
+
+myButton.addEventListener("click", event => {
+    if(event.target.classList.contains("disabled")){
+        event.target.textContent += "🥵";
+    }
+    else {
+        event.target.classList.replace("enabled", "disabled");
+    }
+});
+*/
+
+let buttons = document.querySelectorAll(".myButtons");
+
+buttons.forEach(button => {
+    button.classList.add("enabled");
+});
+
+/*
+buttons.forEach(button => {
+    button.classList.remove("enabled");
+});
+*/
+
+buttons.forEach(button => {
+    button.addEventListener("mouseover", event => {
+        event.target.classList.toggle("hover");
+    });
+});
+
+buttons.forEach(button => {
+    button.addEventListener("mouseout", event => {
+        event.target.classList.toggle("hover");
+    });
+});
+
+buttons.forEach(button => {
+    button.addEventListener("click", event => {
+        if(event.target.classList.contains("disabled")){
+            event.target.textContent += "🥵";
+        }
+        else {
+            event.target.classList.replace("enabled", "disabled");
+        }
+    });
+});
