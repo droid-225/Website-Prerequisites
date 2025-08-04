@@ -2182,7 +2182,7 @@ function playGame(playerChoice) {
 */
 
 //Image Slider
-
+/*
 const slides = document.querySelectorAll(".slides img");
 let slideIndex = 0;
 let intervalId = null;
@@ -2221,3 +2221,45 @@ function nextSlide() {
     slideIndex++;
     showSlide(slideIndex);
 }
+*/
+
+//Callback Hell
+// A situation in JS where callbacks are nested within other callbacks to the point where
+// the code is difficult to read. We can use promises + async/await to avoid it.
+
+function task1(callback) {
+    setTimeout(() => {
+        console.log("Task 1 Complete");
+        callback();
+    }, 2000);
+}
+
+function task2(callback) {
+    setTimeout(() => {
+        console.log("Task 2 Complete");
+        callback();
+    }, 1000);
+}
+
+function task3(callback) {
+    setTimeout(() => {
+        console.log("Task 3 Complete");
+        callback();
+    }, 3000);
+}
+
+function task4(callback) {
+    setTimeout(() => {
+        console.log("Task 4 Complete");
+        callback();
+    }, 1500);
+}
+
+// Simple example of callback hell
+task1(() => {
+    task2(() => {
+        task3(() => {
+            task4(() => console.log("All Tasks Complete"));
+        });
+    });
+});
