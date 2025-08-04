@@ -2129,7 +2129,7 @@ buttons.forEach(button => {
 */
 
 //Rock Paper Scissors Program
-
+/*
 const choices = ["rock", "paper", "scissors"];
 const playerDisplay = document.getElementById("playerDisplay");
 const compDisplay = document.getElementById("compDisplay");
@@ -2178,4 +2178,46 @@ function playGame(playerChoice) {
             compScoreDisplay.textContent = compScore;
             break;
     }
+}
+*/
+
+//Image Slider
+
+const slides = document.querySelectorAll(".slides img");
+let slideIndex = 0;
+let intervalId = null;
+
+document.addEventListener("DOMContentLoaded", initSlider); // waits for all DOM content to load before displaying slider
+
+function initSlider() {
+    if(slides.length > 0) {
+        slides[slideIndex].classList.add("displaySlide");
+        intervalId = setInterval(nextSlide, 5000);
+    }
+}
+
+function showSlide(index) {
+    if(index >= slides.length) {
+        slideIndex = 0;
+    }
+    else if(index < 0) {
+        slideIndex = slides.length - 1;
+    }
+
+    slides.forEach(slide => {
+        slide.classList.remove("displaySlide");
+    });
+
+    slides[slideIndex].classList.add("displaySlide");
+}
+
+function prevSlide() {
+    clearInterval(intervalId);
+    slideIndex--;
+    showSlide(slideIndex);
+}
+
+function nextSlide() {
+    slideIndex++;
+    showSlide(slideIndex);
 }

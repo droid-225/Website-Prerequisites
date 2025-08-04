@@ -8,24 +8,14 @@
     </head>
 
     <body>
-        <h1>Rock! Paper! Scissors!</h1>
-
-        <div class="choices">
-            <button onclick="playGame('rock')">🪨</button>
-            <button onclick="playGame('paper')">📄</button>
-            <button onclick="playGame('scissors')">✂️</button>
-        </div>
-
-        <div id="playerDisplay">Player:</div>
-        <div id="compDisplay">Computer:</div>
-        <div id="resultDisplay"></div>
-
-        <div class="scoreDisplay">Player Score: 
-            <span id="playerScoreDisplay">0</span>
-        </div>
-
-        <div class="scoreDisplay">Computer Score: 
-            <span id="compScoreDisplay">0</span>
+        <div class="slider">
+            <div class="slides">
+                <img class="slide" src="images/agumon.jpg" alt="Agumon">
+                <img class="slide" src="images/greymon.jpg" alt="Greymon">
+                <img class="slide" src="images/metalgreymon.jpg" alt="Metal Greymon">
+            </div>
+            <button class="prev" onclick="prevSlide()">&#10094</button> <!-- &# is used to make unicode characters -->
+            <button class="next" onclick="nextSlide()">&#10095</button>
         </div>
 
         <!--always keep script element last to avoid JS errors affecting website visuals-->
