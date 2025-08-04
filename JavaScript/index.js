@@ -2226,7 +2226,7 @@ function nextSlide() {
 //Callback Hell
 // A situation in JS where callbacks are nested within other callbacks to the point where
 // the code is difficult to read. We can use promises + async/await to avoid it.
-
+/*
 function task1(callback) {
     setTimeout(() => {
         console.log("Task 1 Complete");
@@ -2263,3 +2263,76 @@ task1(() => {
         });
     });
 });
+*/
+
+//Promise
+// An object that manages asynchronous oeprations.
+// You can wrap a Promise object round asynchronous code
+// "I promise to return a value"
+// Pending -> Resolved or Rejected
+// Syntax: new Promise((resolve, reject) => {asynchronous code})
+// resolve if code successfull, reject if not
+// Do these chores in order
+// 1. Walk the dog
+// 2. Clean the kitchen
+// 3. Take out the trash
+
+function walkDog() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const dogWalked = false;
+            
+            if(dogWalked) {
+                resolve("You walk the dog 🐕");
+            }
+            else {
+                reject("You didn't walk the dog!");
+            }
+        }, 1500);
+    });
+}
+
+function cleanKitchen() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const kitchenCleaned = true;
+            
+            if(kitchenCleaned) {
+                resolve("You clean the kitchen 🧹");
+            }
+            else {
+                reject("You didn't clean the kitchen!");
+            }
+        }, 2500); 
+    });
+}
+
+function takeOutTrash() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const trashTakenOut = false;
+            
+            if(trashTakenOut) {
+                resolve("You take out the trash 🗑️");
+            }
+            else {
+                reject("You didn't take out the trash!");
+            }
+        }, 500);
+    }); 
+}
+
+/* // Callback Hell
+walkDog(() => {
+    cleanKitchen(() => {
+        takeOutTrash(() => console.log("You finished all the chores!"));
+    });
+});
+*/
+
+// Method Chaining
+walkDog().then(value => {console.log(value); return cleanKitchen()})
+         .then(value => {console.log(value); return takeOutTrash()})
+         .then(value => {console.log(value); console.log("You finished all the chores!")})
+         .catch(error => console.error(error));
+// method chain continues until end or error occurs
