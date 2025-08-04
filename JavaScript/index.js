@@ -2346,7 +2346,7 @@ walkDog().then(value => {console.log(value); return cleanKitchen()})
 // Allows you to write asynchronous code in  a synchronous manner.
 // Async doesn't have resolve or reject parameters.
 // Everything after Await is placed in an event queue.
-
+/*
 function walkDog() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -2411,3 +2411,33 @@ async function doChores() {
 }
 
 doChores();
+*/
+
+//JSON Files
+// JSON (Javascript Object Notation) is a data-interchange format used for exchaning data between
+// a server and a web application.
+// JSON files can be formatted as: {key:value} OR [value1, value2, value3]
+// JSON.stringify() = converts a JS object to a JSON string
+// JSON.parse() = converts a JSON string to a JS object
+/*
+const jsonNames = `["Spongebob", "Patrick", "Squidward", "Sandy"]`;
+const jsonPerson = `{"name": "Spongebob", "age": 30, "isEmployed": true, "hobbies": ["Jellyfishing", "Karate", "Cooking"]}`;
+const jsonPeople = `[{"name": "Spongebob", "age": 30, "isEmployed": true}, 
+                     {"name": "Patrick", "age": 35, "isEmployed": false},
+                     {"name": "Squidward", "age": 40, "isEmployed": true},
+                     {"name": "Sandy", "age": 25, "isEmployed": false}]`;
+
+//const jsonString = JSON.stringify(people);
+
+//console.log(jsonString);
+
+const parsedData = JSON.parse(jsonPeople);
+
+console.log(parsedData);
+*/
+
+fetch("people.json")
+    .then(response => response.json())
+    .then(values => values.forEach(value => console.log(value)))
+    .catch(error => console.error(error));
+// here, fetch and response.json both return promises
