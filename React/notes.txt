@@ -5,7 +5,10 @@ npm run dev
 React works on components, basically legos if you had to make the legos yourself.
 
 The return function only returns one element, but multiple elements can be placed insde of that element to return multiple.
-In the main function (here it's App.jsx), we can return multiple components by putting them in a segment (inside '<>' and '</>')
+In the main function (here it's App.jsx), we can return multiple components by putting them in a fragment (inside '<>' and '</>')
 
 In a jsx file, to use JS in the return function, we need to wrap the code with '{}'.
 Outside the return function, we can write JS straight up as long as it's inside the bigger function. 
+
+Part 2: Card Components
+With jsx, instead of class=, we use className= to assign classes
