@@ -58,3 +58,14 @@ const highCalFruits = fruits.filter(fruit => fruit.calories >= 100); : Example o
 The && (and) operator can be used as a shortcut for the terniary operator since we only want to display the list when both cases are true
 As long as the list actually exists, the corresponding "<List items={fruits} category="Fruits"/>" portion will be true
 Also known as short circuiting
+
+Part 7: Click Events
+Made Button2 for this one
+If you add a set of parenthesis after a callback, you'll envoke it right away
+Ex: handleClick2("Bro")
+To avoid this, call it using an arrow function or have it wrapped in another function
+Ex: () => handleClick2("Bro")
+
+In the event parameter, people usually just shorten "event" to "e"
+
+onDoubleClick can be used to handle double clicks!
