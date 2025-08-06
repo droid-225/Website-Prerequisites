@@ -27,4 +27,16 @@ Part 3: Add CSS Styles
     *Great for components with individual styling
     *Not maintainable in large projects for more complex styling
 
+Part 3: props [defaultProps deprecated in React 19+]
+props are real-only properties that are shared between components.
+A parent component can send data to a child component.
+Syntax = <Component key=value/>
 
+If the value is not a string, it needs to be wrapped in {}
+Boolean values don't display directly to the DOM, they need to be part of a conditional statment, like a ternary operator
+
+propTyps: a mechanism that ensures that the passed value is of the correct datatype
+Example: age: PropTypes.number
+
+In new React (19+) you to manually download prop-types (usin npm install prop-types) in the directory if you are using standard JS
+Still doesn't work lmao, Typescript is better for this since it has built in type checking code
