@@ -79,3 +79,10 @@ useState() : A React hook that allows the creation of a stateful variable and a 
 
 Regular JS won't be able to change the value of the variable (like name) without using the predefined function (like setName)
 When you use the setter function of a stateful varible, it triggers a rerender of the virtual dom, normal variables don't
+
+Part 9: onChange
+Event handler used primarily with form elements
+ex. <input>, <textarea>, <select>, <radio>
+Triggers a function every time the value of the input changes
+
+Created MyComponent2 for this
