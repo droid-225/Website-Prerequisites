@@ -11,4 +11,20 @@ In a jsx file, to use JS in the return function, we need to wrap the code with '
 Outside the return function, we can write JS straight up as long as it's inside the bigger function. 
 
 Part 2: Card Components
-With jsx, instead of class=, we use className= to assign classes
+With jsx, instead of class=, we use className= to assign classes since "class" is already a reserved keyword for something else
+
+Part 3: Add CSS Styles
+1. External: index.css
+    *Can become too big and hard to manage in larger projects
+    *Can cause naming conflicts
+2. Modules: basically make a separate folder housing both the component and its styling
+    *Avoids naming conflicts
+    *Requires more setup
+    *Global styles aren't applied easily 
+3. Inline
+    *Easy to understand
+    *Prevents global style conflicts
+    *Great for components with individual styling
+    *Not maintainable in large projects for more complex styling
+
+
