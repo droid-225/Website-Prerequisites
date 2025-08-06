@@ -44,3 +44,17 @@ Still doesn't work lmao, Typescript is better for this since it has built in typ
 Part 5: Conditional Rendering
 Allows you to control what gets rendered in you application based on certain conditions.
 (show, hide, or change components)
+
+Part 6: Rendering Lists
+Need to turn array of values into list elements using the map method before they can be printed as such
+If printing objects, each object needs a key attribute in it's corresponding list element, each key should be unique to that object
+&nbsp; : used to put in a tab in the message
+fruits.sort((a, b) => a.name.localeCompare(b.name)); : Alphabetical order
+fruits.sort((a, b) => a.calories - b.calories); // Numeric order
+for revere alphabetical or numberic order, just switch 'a' and 'b'
+const highCalFruits = fruits.filter(fruit => fruit.calories >= 100); : Example of filtering data
+
+{fruits.length > 0 && <List items={fruits} category="Fruits"/>} : can be used to conditionally display a list
+The && (and) operator can be used as a shortcut for the terniary operator since we only want to display the list when both cases are true
+As long as the list actually exists, the corresponding "<List items={fruits} category="Fruits"/>" portion will be true
+Also known as short circuiting
