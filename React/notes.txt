@@ -86,3 +86,6 @@ ex. <input>, <textarea>, <select>, <radio>
 Triggers a function every time the value of the input changes
 
 Created MyComponent2 for this
+
+Part 10: Color Picker App
+When embedding JS and changing CSS properties, those properties have to be in {} as if they were in an object
