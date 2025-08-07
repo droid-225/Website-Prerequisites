@@ -108,3 +108,9 @@ This is because React batches together state updates
 
 When using arrow functions, it is recommended to take use the first letter of the state variable being changed as the input
 React puts updater functions in a queue for execution
+
+Part 12: Update Objects in State
+Made MyComponent3 for this
+
+When adding another value to the attributes of a JS object, if the value's key is same to an existing value in the object, the old object is replaced with the new one.
+This is due to the fact that JS doesn't allow duplicate keys in objects.
