@@ -89,3 +89,22 @@ Created MyComponent2 for this
 
 Part 10: Color Picker App
 When embedding JS and changing CSS properties, those properties have to be in {} as if they were in an object
+
+Part 11: Updater Functions
+An updater function is a function passed as an argument to setState() usually.
+ex. setYear(year + 1), would be better to do this: setYear(y => y + 1)
+Allows for safe updates based on previous data state (here its y).
+Used with multiple state updates and asynchronous functions.
+Good practice to use updater functions.
+
+I'm changing the Counter component for this one.
+
+The setter function established for a statefull variable only uses the current state of the variable to perform updates.
+so like:
+setCount(count + 1);
+setCount(count + 1);
+only makes count got up by 1 since both times use the same orignial count value
+This is because React batches together state updates
+
+When using arrow functions, it is recommended to take use the first letter of the state variable being changed as the input
+React puts updater functions in a queue for execution
