@@ -1,8 +1,8 @@
-import MyComponent5 from "./MyComponent5.jsx";
+import ToDoList from './ToDoList.jsx'
 
 function App() {
 
-  return(<MyComponent5/>);
+  return(<ToDoList/>);
 }
 
 export default App
