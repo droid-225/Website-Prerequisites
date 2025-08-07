@@ -1,8 +1,8 @@
-import MyComponent3 from "./MyComponent3";
+import MyComponent4 from "./MyComponent4.jsx";
 
 function App() {
 
-  return(<MyComponent3/>);
+  return(<MyComponent4/>);
 }
 
 export default App

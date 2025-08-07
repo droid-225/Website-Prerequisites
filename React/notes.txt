@@ -114,3 +114,9 @@ Made MyComponent3 for this
 
 When adding another value to the attributes of a JS object, if the value's key is same to an existing value in the object, the old object is replaced with the new one.
 This is due to the fact that JS doesn't allow duplicate keys in objects.
+
+Part 13: Update Arrays in State
+Made MyComponent4 for this.
+
+Just for reference, in this part and the last part, the spread function (...) was used to access all the values of the array (for this program) and attributes (for the last program)
+Using an underscore _ as a parameter is a convention to show that the parameter is being ignored.
