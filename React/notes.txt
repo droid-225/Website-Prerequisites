@@ -125,3 +125,31 @@ Part 14: Update Array of Objects in State
 Made MyComponent5 for this.
 
 Part 15: To-Do List App
+
+Part 16: useEffect() Hook
+useEffect is a React hoock that tells react to do some code when:
+* This component re-renders
+* This component mounts
+* The state of a value
+Syntax: useEffect(function, [dependencies])
+1. useEffect(() => {}) runs after every re-render
+2. useEffect(() => {}, []) runs only on mount
+3. useEffect(() => {}, value) runs on mount and when value changes
+
+Used in:
+1. Event Listeners
+2. DOM manipulation
+3. Subscriptions (real-time updates)
+4. Fetching data from an API
+5. Clean up when a component unmounts
+
+Basically just some side code
+
+Using MyComponent6 for this.
+
+Place useEffect() near the top of your component
+
+Technically the code inside of useEffect can still run without it wrapping it in some cases,
+but it keeps the code more organized and easier to read, and it may lead to unexpected code running when you don't want to without useEffect.
+
+Mounting means adding a componenet to the DOM and unmounting means removing it from the DOM.
