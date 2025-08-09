@@ -153,3 +153,6 @@ Technically the code inside of useEffect can still run without it wrapping it in
 but it keeps the code more organized and easier to read, and it may lead to unexpected code running when you don't want to without useEffect.
 
 Mounting means adding a componenet to the DOM and unmounting means removing it from the DOM.
+
+Part 17: Digital Clock App
+ 

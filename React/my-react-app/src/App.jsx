@@ -1,8 +1,8 @@
-import MyComponent6 from './MyComponent6.jsx'
+import DigitalClock from './DigitalClock.jsx'
 
 function App() {
 
-  return(<MyComponent6/>);
+  return(<DigitalClock/>);
 }
 
 export default App
