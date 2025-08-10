@@ -152,7 +152,23 @@ Place useEffect() near the top of your component
 Technically the code inside of useEffect can still run without it wrapping it in some cases,
 but it keeps the code more organized and easier to read, and it may lead to unexpected code running when you don't want to without useEffect.
 
-Mounting means adding a componenet to the DOM and unmounting means removing it from the DOM.
+Mounting means adding a component to the DOM and unmounting means removing it from the DOM.
 
 Part 17: Digital Clock App
- 
+
+Part 18: useContext() Hook
+The useContext() hook allows you to share values between multiple levels of components without passing props thorugh each level.
+
+Passing props down through consequent components (Child components) is called prop drilling.
+
+To use useContext(), we need to set up a *Provider Component*
+1. import {createContext} from 'react';
+2. export const MyContext = createContext();
+3. <MyContext.Provider value={value}>
+    <Child />
+   </MyContext.Provider>
+
+Any component that needs this data, we set them up to be a *Consumer Component*
+1. import React, {useContext} from 'react';
+   import {MyContext} from './ProviderComponent'
+2. const value = useContext(MyContext); 
