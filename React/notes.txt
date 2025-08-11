@@ -172,3 +172,16 @@ Any component that needs this data, we set them up to be a *Consumer Component*
 1. import React, {useContext} from 'react';
    import {MyContext} from './ProviderComponent'
 2. const value = useContext(MyContext); 
+
+Part 19: useRef() Hook
+Similar to useState, which re-renders the component when the state value changes.
+useRef, "use reference", does not cause re-renders when its value changes.
+When you want a component to "remember" some information, but you don't want that information to trigger new renders.
+1. Accessing/Interacting with DOM elements
+2. Handling Focus, Animations, and Transitions
+3. Mananging Timers and Intervals
+
+Using MyComponent7 for this.
+
+useRef() returns an object, with one property called "current"
+Passing a value into useRef sets the value of "current"
