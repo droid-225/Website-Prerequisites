@@ -185,3 +185,6 @@ Using MyComponent7 for this.
 
 useRef() returns an object, with one property called "current"
 Passing a value into useRef sets the value of "current"
+
+Part 20: Stopwatch App
+Date.now returns time in miliseconds from Epoch (Jan 1 1970)

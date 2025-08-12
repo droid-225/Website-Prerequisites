@@ -1,8 +1,8 @@
-import MyComponent7 from './MyComponent7.jsx';
+import Stopwatch from './Stopwatch.jsx';
 
 function App() {
 
-  return(<MyComponent7/>);
+  return(<Stopwatch/>);
 }
 
 export default App
