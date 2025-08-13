@@ -2,7 +2,7 @@ Part 2: Databases
 [Note: Part 1 was just the setup]
 
 Basic database structure:
-1. document: singluar entity
+1. document: singluar entity / object in the database
 2. collection: a collection of documents, like a row in a relational database
 3. database: a collection of collections
 
@@ -14,3 +14,10 @@ use databaseName: Switches to specified database, if database given does not exi
 db.createCollection("collectionName"): Creates a new collection in the active database
 db.dropDatabase(): Deletes (drops) the active database
     -> Creation and deletion of databases can also be done using Compass
+
+Part 3: Insert
+
+db.collectionName.insertOne({field:value, ...}): Creates a single new document in the specified collection with one or more field:value pairs.
+db.collectionName.find(): Shows all documents inside the specified collection.
+db.collectionName.insertMany([{field:value, ...}, {field:value, ...}, ...]): Creates multiple new documents in the specified collection with one or more field:value pairs.
+Same stuff can be done in Compass (use format button (the right most bookshelf looking button) if it a warning pops up during creation)
