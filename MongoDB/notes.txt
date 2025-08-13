@@ -1,0 +1,16 @@
+Part 2: Databases
+[Note: Part 1 was just the setup]
+
+Basic database structure:
+1. document: singluar entity
+2. collection: a collection of documents, like a row in a relational database
+3. database: a collection of collections
+
+exit: Exits mongosh
+cls: Clears screen
+show dbs: Shows all Databases.
+use databaseName: Switches to specified database, if database given does not exit, a new empty database with that name is created.
+    -> Empty databases will not show up in the list of databases.
+db.createCollection("collectionName"): Creates a new collection in the active database
+db.dropDatabase(): Deletes (drops) the active database
+    -> Creation and deletion of databases can also be done using Compass
