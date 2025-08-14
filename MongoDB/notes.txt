@@ -21,3 +21,18 @@ db.collectionName.insertOne({field:value, ...}): Creates a single new document i
 db.collectionName.find(): Shows all documents inside the specified collection.
 db.collectionName.insertMany([{field:value, ...}, {field:value, ...}, ...]): Creates multiple new documents in the specified collection with one or more field:value pairs.
 Same stuff can be done in Compass (use format button (the right most bookshelf looking button) if it a warning pops up during creation)
+
+Part 4: Data Types
+
+String: Series of text in quotes, can contain alphabets, spaces, and numbers
+Integer: Whole numbers
+Double: Decimal numbers
+Boolean: True or false
+Date: Dates
+    -> Syntax: dateVariableName: new Date()
+    -> If Date() is left empty, it returns the current date and time in UTC
+    -> Otherwise a date can be specified, e.g. "2025-08-14T00:00:00"
+Null: No value
+Arrays: A collection of values
+    -> Syntax: arrayVariableName: ["value1", "value2", ...]
+Nested Document: Document within a document
