@@ -87,3 +87,13 @@ We can concatenate the following methods to db.collectionName:
 -> filter: Can be left empty here to select all documents
     -> fieldName:{$exists:true/false} : Filters the documents that either do or do not have the specified field
 -> update: Update function applied to all filtered documents
+
+Part 8: Delete
+
+We can concatenate the following methods to db.collectionName:
+
+.deleteOne({query}) : Deletes the document that satisfies the query
+
+.deleteMany({query}) : Deletes documents which satisfy the query
+
+the $exists can also be used in the queries here to delete documents which either do or do not have a specified field. 
