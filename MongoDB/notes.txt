@@ -36,3 +36,26 @@ Null: No value
 Arrays: A collection of values
     -> Syntax: arrayVariableName: ["value1", "value2", ...]
 Nested Document: Document within a document
+
+Part 5: Sorting and Limiting
+
+Chaining the .sort() method like this:
+db.collectionName.find().sort({fieldName:value})
+can be used to sort documents in a collection based on the specified field and a given value
+e.g. 
+.sort({name:value}) would sort the name field either,
+    -> if value = 1, in alphabetical order
+    -> if value = -1, in reverse-alphabetical order
+
+.sort({gpa:value}) would sort the gpa field either,
+    -> if value = 1, in ascending order
+    -> if value = -1, in descending order
+
+Chaining the .limit() method like this:
+db.collectionName.find().limit()
+ca be used to return a specified number of documents from a collection.
+e.g.
+.limit(1) returns the first document
+.limit(3) returns the first 3 documents
+
+.sort({}) and .limit() can also be chained consecutively
