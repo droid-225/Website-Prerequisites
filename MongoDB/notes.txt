@@ -73,3 +73,17 @@ The find method also has the following parameters:
     -> multiple parameter values can also be chained here
         -> e.g. .find({}, {_id:false, name:true}) only returns the name values of each document
 
+Part 7: Update
+
+We can concatenate the following methods to db.collectionName:
+
+.updateOne({filter}, {update}) : Used to update single document
+-> filter: Selection criteria, usually better to filter by object id if a specific document needs to be updated
+-> update: Update function to be executed
+    -> $set:{fieldName:value} : Either adds or replaces specified field to/in the filtered document
+    -> $unset:{fieldName:""} : Removes specified field from document
+
+.updateMany({filter}, {update}) : Used to update many documents
+-> filter: Can be left empty here to select all documents
+    -> fieldName:{$exists:true/false} : Filters the documents that either do or do not have the specified field
+-> update: Update function applied to all filtered documents
