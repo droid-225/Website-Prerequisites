@@ -59,3 +59,17 @@ e.g.
 .limit(3) returns the first 3 documents
 
 .sort({}) and .limit() can also be chained consecutively
+
+Part 6: Find
+
+The find method also has the following parameters:
+.find({query}, {projection})
+-> query is can be used to find documents with one or more specific field values (comma sepearated)
+    -> e.g. .find({name:"XXXXX"}) returns only those documents with the given name value
+    -> e.g. .find({name:"xxxxxx", gpa:xxxxx}) returns only those documents with the given name and gpa values
+-> projection is used to return only certain fields from the documents in the collection
+    -> e.g. .find({}, {name:true}) returns only the names and ids of each document in the collection 
+    -> id is true by default, and needs to be manually set to false if not needed in this parameter
+    -> multiple parameter values can also be chained here
+        -> e.g. .find({}, {_id:false, name:true}) only returns the name values of each document
+
