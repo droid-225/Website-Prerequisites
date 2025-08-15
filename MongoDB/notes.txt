@@ -151,3 +151,25 @@ Part 10: Logical Operators
 -> %or
     -> db.collectionName.find({$or: [{//conditonal operator 1}, {//conditonal operator 2}, ..., {//conditonal operator n}]})
     -> Returns documents that pass any of the conditionals in the conditonal operator array
+
+Part 11: Indexes
+
+Using indexes, we are storing our data as a B-Tree
+
+Note: Chaining a query with .explain("executionStats") also returns stats about the execution of the query.
+-> The query performes a linear search when finding documents based on certain criteria
+-> This can take a long time with larger databases
+-> Instead we can speed the search time up using indexes
+
+.createIndex(): Creates an index for documents in a collection based on specified criteria or order
+-> e.g. db.students.createIndex({name: 1}) make an inndex based on the names in ascending order
+
+An index is just a value we can use to more easily find certain values.
+The object id "_id_" is a default index
+
+.getIndexes(): Returns all the indexes we can use for the given collection
+e.g. db.students.getIndexes() returns all the indexes we can use for the students collection
+
+.dropIndex("indexName"): Removes the index with the specified name
+
+Using indexes is useful when doing searching, not so much during updating
