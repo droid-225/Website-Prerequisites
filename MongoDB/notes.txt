@@ -132,3 +132,22 @@ e.x.: db.collectionName.find({fieldName:{$gte:lowerValue, $lte:higherValue}})
 -> $nin: Not in
     -> db.collectionName.find({fieldName:{$nin:[//array of values]}})
     -> Returns documents with field values that do not match those in the array
+
+Part 10: Logical Operators
+
+-> $and
+    -> db.collectionName.find({$and: [{//conditonal operator 1}, {//conditonal operator 2}, ..., {//conditonal operator n}]})
+    -> Returns documents that pass all the conditionals in the conditonal operator array
+
+-> $not
+    -> db.collectionName.find({fieldName: {$not: {conditionalOpeartor:value}}})
+    -> Returns documents that do not pass the conditional operator
+    -> Also returns documents with null values for the specified field
+
+-> $nor
+    -> db.collectionName.find({$nor: [{//conditonal operator 1}, {//conditonal operator 2}, ..., {//conditonal operator n}]})
+    -> Returns documents that do not pass all of the conditionals in the conditonal operator array
+
+-> %or
+    -> db.collectionName.find({$or: [{//conditonal operator 1}, {//conditonal operator 2}, ..., {//conditonal operator n}]})
+    -> Returns documents that pass any of the conditionals in the conditonal operator array
