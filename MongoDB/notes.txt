@@ -97,3 +97,38 @@ We can concatenate the following methods to db.collectionName:
 .deleteMany({query}) : Deletes documents which satisfy the query
 
 the $exists can also be used in the queries here to delete documents which either do or do not have a specified field. 
+
+Part 9: Comparison Operators
+
+Operators:
+-> $ne: Not
+    -> db.collectionName.find({fieldName:{$ne:value}})
+    -> Returns all documents that do not have the specified field value
+
+-> $lt: Less than
+    -> db.collectionName.find({fieldName:{$lt:value}})
+    -> Returns all documents that have a field value less than the specified value
+
+-> #lte: Less than or equal to
+    -> db.collectionName.find({fieldName:{$lte:value}})
+    -> Returns all documents that have a field value less than or equal to the specified value
+
+-> #gt: Less than or equal to
+    -> db.collectionName.find({fieldName:{$gt:value}})
+    -> Returns all documents that have a field value greater than to the specified value
+
+-> #gte: Less than or equal to
+    -> db.collectionName.find({fieldName:{$gte:value}})
+    -> Returns all documents that have a field value greater than or equal to the specified value
+
+You can use combinations of these opeartors too
+e.x.: db.collectionName.find({fieldName:{$gte:lowerValue, $lte:higherValue}})
+-> Returns documents with field values that are between the lower and higher values
+
+-> $in: In
+    -> db.collectionName.find({fieldName:{$in:[//array of values]}})
+    -> Returns documents with field values that match those in the array
+
+-> $nin: Not in
+    -> db.collectionName.find({fieldName:{$nin:[//array of values]}})
+    -> Returns documents with field values that do not match those in the array
