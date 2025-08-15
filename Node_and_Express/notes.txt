@@ -1,3 +1,4 @@
+Part 1: Intro
 What is Node?
 -> Environment to run JS outside Browser
 -> Full-Stack
@@ -15,3 +16,8 @@ CLI can just be used through VSCode or any other IDE
 
 Created first.js for this.
 To run this, we can either use the windows terminal by using node first.js or just using the terminal in VSCode and use node first.js
+
+Part 2: Globals
+Changed the name of first.js to 1-intro.js for continuity.
+
+Instead of writing node app.js, you can also just write node app to run the app.
