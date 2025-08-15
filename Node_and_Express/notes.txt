@@ -1,0 +1,17 @@
+What is Node?
+-> Environment to run JS outside Browser
+-> Full-Stack
+-> Cannot use broswer-side APIs, since there bascially is no borwser in Node.js
+-> No DOM
+-> No 2indow
+-> Server side apps
+-> Filesystem
+-> Versions
+-> CommonJS
+
+REPL is for playing around, CLI is for everything else.
+To access REPL, we can either use the NodeJS app or just type "node" and then enter in the terminal.
+CLI can just be used through VSCode or any other IDE
+
+Created first.js for this.
+To run this, we can either use the windows terminal by using node first.js or just using the terminal in VSCode and use node first.js
