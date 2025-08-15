@@ -173,3 +173,16 @@ e.g. db.students.getIndexes() returns all the indexes we can use for the student
 .dropIndex("indexName"): Removes the index with the specified name
 
 Using indexes is useful when doing searching, not so much during updating
+
+Part 12: Collections
+
+show collections : shows all collections in a database
+
+The .createCollection() method has some fields:
+db.createCollection("collectionName", {capped:true, size:10000000, max:100}) : Sets a maximum memory size (size)[in bytes] and a maximum document count (max).
+-> capped can either be true or false
+
+db.createCollection("collectionName", {autoIndexId:true}) : Sets whether an automatic index Id is set for the collection.
+-> autoIndexId can either be true or false
+
+db.collectionName.drop() : Removes the specified collection
