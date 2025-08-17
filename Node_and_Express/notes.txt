@@ -1,4 +1,5 @@
-Part 1: Intro
+Intro:
+
 What is Node?
 -> Environment to run JS outside Browser
 -> Full-Stack
@@ -17,7 +18,25 @@ CLI can just be used through VSCode or any other IDE
 Created first.js for this.
 To run this, we can either use the windows terminal by using node first.js or just using the terminal in VSCode and use node first.js
 
-Part 2: Globals
+
+Globals:
+
 Changed the name of first.js to 1-intro.js for continuity.
 
 Instead of writing node app.js, you can also just write node app to run the app.
+
+
+Built-in Modules:
+-> OS
+-> PATH
+-> FS
+-> HTTP
+-> More in the Node docs
+
+Created the content folder and its contents for this.
+
+Sync vs. Async:
+Async is just better since it allows you to do other tasks while still doing the previous task.
+
+The built-in modules js file includes the in-video code for files 8 to 12.
+So for continuity, I will start the next file with 13 just to keep in line with the videos and avoid confusion.
