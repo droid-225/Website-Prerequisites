@@ -40,3 +40,15 @@ Async is just better since it allows you to do other tasks while still doing the
 
 The built-in modules js file includes the in-video code for files 8 to 12.
 So for continuity, I will start the next file with 13 just to keep in line with the videos and avoid confusion.
+
+
+NPM Commands
+-> Node Package Manager
+-> External modules (dependecies/package), basically just pre-made JS code we can use in our projects
+-> You can search for packages on npmjs.com
+
+npm automatically creates the node_modules folder to store all installed npm packages.
+Installing packages also installs thier dependecies.
+
+You need to place the node_modules folder in the gitignore file so you don't also share extra dependecies when sharing our package.
+The person who uses our package can just use "npm install" to download all required packages since they should already be specified in the package.json file.
