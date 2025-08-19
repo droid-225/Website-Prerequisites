@@ -52,3 +52,23 @@ Installing packages also installs thier dependecies.
 
 You need to place the node_modules folder in the gitignore file so you don't also share extra dependecies when sharing our package.
 The person who uses our package can just use "npm install" to download all required packages since they should already be specified in the package.json file.
+
+
+Nodemon
+Watches our files and automatically refreshes. 
+npm i nodemon -D (or --save-dev for dev dependecy)
+dev dependecies are only used when developing apps, but when sharing, we only share the regular dependecies.
+
+The "scripts" object in the package.json file can be used to setup scripts we can run using npm and specific keywords.
+Some of these scripts can dirctly be run by doing "npm commandName" but some might need you to use "npm run commandName".
+You can still run the ones that don't require the "run" keyword using it.
+You can stop nodemon using ctrl + c.
+
+
+Uninstalling Modules
+Standard Approach:
+-> npm uninstall moduleName
+
+Nuclear Approach:
+-> Removing package-lock.json
+-> Removing the module to be uninstalled in package.json
