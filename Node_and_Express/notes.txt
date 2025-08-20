@@ -72,3 +72,13 @@ Standard Approach:
 Nuclear Approach:
 -> Removing package-lock.json
 -> Removing the module to be uninstalled in package.json
+
+
+Event Loop
+-> Allows NodeJS to perform non-blocking IO operations
+-> Does so by *offloading* operations to the system kernel whenever possible
+
+JS is synchronous and single threaded, but can perform async operations using the event loop.
+
+Note: When using the setTimeout method, the event loop offloads it until the following synchronous code is run, no matter the given timeout.
+Note: When running setInterval, the code inside the method runs every time its interval is reached until the process is killed.
