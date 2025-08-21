@@ -82,3 +82,9 @@ JS is synchronous and single threaded, but can perform async operations using th
 
 Note: When using the setTimeout method, the event loop offloads it until the following synchronous code is run, no matter the given timeout.
 Note: When running setInterval, the code inside the method runs every time its interval is reached until the process is killed.
+
+
+Async Patterns
+Blocking Code:
+-> Code which blocks other requests or code from executing until it is finished.
+-> This can block all users of a website from accessing it until the blocking code is finished from where it was started.
