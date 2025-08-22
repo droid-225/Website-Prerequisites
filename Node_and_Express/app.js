@@ -1,39 +1,20 @@
-const {readFile, writeFile} = require('fs').promises; // automatically creates promises from the imported functions
-//const util = require('util'); // built-in into NodeJS
-//const readFilePromise = util.promisify(readFile);
-//const writeFilePromise = util.promisify(writeFile);
+const EventEmitter = require('events'); // common practice is to call this import "EventEmitter"
 
-/*
-const getText = (path) => {
-    return new Promise((resolve, reject) => {
-        readFile(path, 'utf8', (err, data) => {
-            if(err) {
-                reject(err);
-            }  
-            else {
-                resolve(data);
-            }
-        });
-    });
-};
-*/
+const customEmitter = new EventEmitter(); // instace of event class
 
-/* 
-getText('./content/first.txt')
-    .then(result => console.log(result))
-    .catch(err => console.log(err));
-*/
+customEmitter.on('response', (name, id) => { // when this event takes place, to this:
+    console.log(`Data Received! You are #${id}: ${name}`);
+}); 
 
-const start = async() => {
-    try {
-        const first = await readFile('./content/first.txt', 'utf8');
-        const second = await readFile('./content/second.txt', 'utf8');
-        await writeFile('./content/result-mind-grenade.txt', 
-                        `THIS IS AWESOME : ${first} ${second}`);
-        console.log(first, second);
-    } catch(error) {
-        console.log(error);
-    }
-};
+customEmitter.on('response', () => {
+    console.log(`data received`);
+});
 
-start();
+customEmitter.on('response', () => {
+    console.log(`DaTa ReCeIvEd`);
+});
+// we can have as many functions as we want for each event
+
+customEmitter.emit('response', 'joe', 30); // response is the name of the event to be emitted
+// the order matters, event must be first created using .on and then emitted or executed using .emit
+// the values that follow the event's name are the arguments, which there can be 0 or more of
