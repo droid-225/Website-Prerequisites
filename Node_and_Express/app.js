@@ -1,20 +1,16 @@
-const EventEmitter = require('events'); // common practice is to call this import "EventEmitter"
+const {createReadStream} = require('fs');
 
-const customEmitter = new EventEmitter(); // instace of event class
-
-customEmitter.on('response', (name, id) => { // when this event takes place, to this:
-    console.log(`Data Received! You are #${id}: ${name}`);
-}); 
-
-customEmitter.on('response', () => {
-    console.log(`data received`);
+const stream = createReadStream('./content/big.txt', {
+    highWaterMark: 90000
 });
 
-customEmitter.on('response', () => {
-    console.log(`DaTa ReCeIvEd`);
-});
-// we can have as many functions as we want for each event
+stream.on('data', (result) => { // treated like an event
+    console.log(result);
+}); // data divides the data in the given file into chunks, to a max of 64 kb (65486 bytes) per chunk by default
+// the 'data' event comes with createReadStream
+// last buffer: remainder
+// highWaterMark: controls size of each chunk
+// const stream = createReadStream('file location', {highWaterMark: value in bytes});
+// const stream = createReadStream('file location', {encoding: 'utf8'}); lets you actually see the content of the file
 
-customEmitter.emit('response', 'joe', 30); // response is the name of the event to be emitted
-// the order matters, event must be first created using .on and then emitted or executed using .emit
-// the values that follow the event's name are the arguments, which there can be 0 or more of
+stream.on('error', (err) => console.log(err)); // error control

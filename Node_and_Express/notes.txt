@@ -91,3 +91,14 @@ Blocking Code:
 
 Note: All the code for this is only saved in 14-async-patterns.js, which is different from the way the video does it.
       I'm ahead in the numbering, so refer to the notes for better understanding of where everything is.
+      Event emitter code is 15 for me, 13 in the video.
+
+
+Streams
+-> Writeable
+-> Readable
+-> Duplex
+-> Transform
+-> Extend event emitter class
+
+Note: I skipped the 14-event-request.js file in the video and made the 15-create-big-file.js to keep continuity with the video.
