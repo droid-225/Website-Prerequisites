@@ -109,3 +109,8 @@ HTTP Methods
 -> POST: Insert data
 -> PUT: Update data
 -> DELETE: Delete data
+
+
+HTTP Basics
+Use the Mozilla docs for reference for status codes and MIME types.
+tempindex.html was made here just for temp use for learning HTTP basics.
