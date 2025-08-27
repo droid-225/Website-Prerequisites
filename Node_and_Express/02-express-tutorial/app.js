@@ -1,32 +1,20 @@
-const express = require('express');
+const express = require("express");
+const path = require('path');
 const app = express();
-// you can also write it like this:
-// const app = require('express');
 
-// v*************************************************v
-// app.get
-// app.post
-// app.put
-// app.delete
-// ^ the above are just for the http methods (verbs) ^
-
-// app.all : response which can use all http verbs, usually used for 404 errors
-// app.use : middleware
+// setup static and middleware
+app.use(express.static('./public')); // this is absolute fire
+// all the elements are static because they are static in respect to the server itself
 
 app.get('/', (req, res) => {
-    res.status(200).send('Home Page');
-}); // will be performed every time there is a request to '/' (root).
-
-app.get('/about', (req, res) => {
-    res.status(200).send('About Page');
-}); // will be performed every time there is a request to '/' (root).
+    res.sendFile(path.resolve(__dirname, './navbar-app/index.html')); // here we can also use .join
+    // but since it's an absolute path, we want to make sure it knows that it is an absolute path
+});
 
 app.all('*', (req, res) => {
-    res.status(404).send('<h1>Resource not found</h1>'); // .status() specifically sets the status code
+    res.status(404).send('resource not found');
 });
 
-// app.listen
 app.listen(5000, () => {
-    console.log('Server is listening on port 5000');
+    console.log("Server is listening on part 5000");
 });
-// pretty much the same as in http
