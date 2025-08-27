@@ -114,3 +114,4 @@ HTTP Methods
 HTTP Basics
 Use the Mozilla docs for reference for status codes and MIME types.
 tempindex.html was made here just for temp use for learning HTTP basics.
+All this code is saved in the prev folder in the 1-http-basics.js file.
