@@ -29,6 +29,32 @@ app.get('/api/products/:productID', (req, res) => { // the :productID is called 
     res.json(singleProduct);
 });
 
+app.get('/api/v1/query', (req, res) => {
+    //console.log(req.query); // returns query value
+    // two or more query values are joined using '&' with no space in between
+    
+    const{search, limit} = req.query;
+    let sortedProducts = [...products];
+
+    if(search) {
+        sortedProducts = sortedProducts.filter((product) => {
+            return product.name.startsWith(search);
+        });
+    }
+
+    if(limit) {
+        sortedProducts = sortedProducts.slice(0, Number(limit));
+    }
+
+    if(sortedProducts.length < 1) {
+        // You can use either of these two:
+        return res.status(200).send("No Products Match Your Search");
+        //return res.status(200).json({success: true, data: []}); // return is required here so JS doesn't keep reading code
+    }
+
+    return res.status(200).json(sortedProducts);
+});
+
 app.listen(5000, () => {
     console.log('Server is listening on port 5000');
 });
