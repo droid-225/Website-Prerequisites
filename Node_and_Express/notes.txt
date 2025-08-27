@@ -115,3 +115,16 @@ HTTP Basics
 Use the Mozilla docs for reference for status codes and MIME types.
 tempindex.html was made here just for temp use for learning HTTP basics.
 All this code is saved in the prev folder in the 1-http-basics.js file.
+
+
+API vs SSR
+-> API : In express, or node, it means setting up an http interface to interact with our data
+ -> Data sent using JSON
+ -> res.json()
+
+-> SSR : (Server Side Rendering) settup templates and send back entire HTML, JS, and CSS ourselves
+ -> Data sent using templates
+ -> res.render()
+ -> Add more overhead
+
+ We are going to be using API in the following examples.
