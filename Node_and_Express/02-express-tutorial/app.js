@@ -1,25 +1,29 @@
 const express = require('express');
 const app = express();
+const logger = require('./logger.js');
 // req -> middleware -> res
 // middleware does something before sending out response
 
-const logger = (req, res, next) => {
-    const method = req.method;
-    const url = req.url;
-    const time = new Date().getFullYear();
-    console.log(method, url, time);
-    next(); // you have to invoke next or terminate
-}
+app.use('/api', logger); // applies middleware to all routes.
+// order matters, it only works for those routes that come after it.
+// applies the first part to all the rest of the routes.
+// so, here instead of / being just 5000, its /api
+// here '/api' is called our base.
 
-// when working with middleware you MUST pass it on to the next middleware
-// unless terminating the whole cycle
-
-app.get('/', logger, (req, res) => {
+app.get('/', (req, res) => {
     res.send('Home');
 });
 
-app.get('/about', logger, (req, res) => {
+app.get('/about', (req, res) => {
     res.send('About');
+});
+
+app.get('/api/products', (req, res) => {
+    res.send('Products');
+});
+
+app.get('/api/items', (req, res) => {
+    res.send('Items');
 });
 
 app.listen(5000, () => {
