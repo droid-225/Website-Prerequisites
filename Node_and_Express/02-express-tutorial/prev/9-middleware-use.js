@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-const morgan = require('morgan'); // external module
 const logger = require('./logger.js');
 const authorize = require('./authorize.js');
 // req -> middleware -> res
@@ -12,8 +11,7 @@ const authorize = require('./authorize.js');
 // so, here instead of / being just 5000, its /api
 // here '/api' is called our base.
 
-//app.use([logger, authorize]); // executed in order of parameter order
-app.use(morgan('tiny')); // logs how long it took the server to respond
+app.use([logger, authorize]); // executed in order of parameter order
 
 app.get('/', (req, res) => {
     res.send('Home');
