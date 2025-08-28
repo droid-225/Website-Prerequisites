@@ -1,14 +1,17 @@
 const express = require('express');
 const app = express();
 const logger = require('./logger.js');
+const authorize = require('./authorize.js');
 // req -> middleware -> res
 // middleware does something before sending out response
 
-app.use('/api', logger); // applies middleware to all routes.
+//app.use('/api', logger); // applies middleware to all routes.
 // order matters, it only works for those routes that come after it.
 // applies the first part to all the rest of the routes.
 // so, here instead of / being just 5000, its /api
 // here '/api' is called our base.
+
+app.use([logger, authorize]); // executed in order of parameter order
 
 app.get('/', (req, res) => {
     res.send('Home');
