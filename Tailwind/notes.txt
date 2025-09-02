@@ -1,6 +1,6 @@
 All the tailwinds commands can be found in its docs
 
-Commit 2:
+Commit 170:
 bg-green-300 : sets background to a shade of green
 text-slate-900 : sets the text color to a dark shade, not fully black
 min-h-screen : sets the minimum screen height to the height of the screen
@@ -25,3 +25,6 @@ When giving custom amount for classes outside of tailwind, we use [] to store th
 ex. max-w-[customValue] max-w-[1000px] : sets the max width to 1000px
 
 md: breakpoint is at 768 px
+
+Commit 171:
+The middle invisible button was added as basically a shield against the overlay button from overlaying the tutoring text.
