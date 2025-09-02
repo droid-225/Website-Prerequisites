@@ -1,0 +1,27 @@
+All the tailwinds commands can be found in its docs
+
+Commit 2:
+bg-green-300 : sets background to a shade of green
+text-slate-900 : sets the text color to a dark shade, not fully black
+min-h-screen : sets the minimum screen height to the height of the screen
+relative: sets position to relative
+
+tailwind is mobile first when it comes to styles
+
+breakpoints: conditionals to ensure styles are specific to screen size, good for making
+apps that run on both mobile and desktop
+breakpoints are denoted using colons (:) after a breakpoint property.
+sm:text-lg / sm:text-base : sets the text size to large / medium, respectively, after a certain screen width is reached (here it is about 640 for sm [small])
+text-sm : sets the text to small
+text-sm sm:text-base : sets the text to small by default until the sm: breakpoint is reached (after the screen width is >= 640 px)
+
+flex : sets display to flex
+justify-between: sets the justify to between
+p-8 : sets the padding to 2rem
+
+I think going forward i'm just going to not note every single command here, just the ones that seem intersting.
+
+When giving custom amount for classes outside of tailwind, we use [] to store the value
+ex. max-w-[customValue] max-w-[1000px] : sets the max width to 1000px
+
+md: breakpoint is at 768 px
