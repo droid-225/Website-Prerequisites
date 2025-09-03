@@ -28,3 +28,6 @@ md: breakpoint is at 768 px
 
 Commit 171:
 The middle invisible button was added as basically a shield against the overlay button from overlaying the tutoring text.
+
+Commit 172:
+When giving specific values for max-w-[], also use w-full alongside it to ensure the max width is being used until the specified max is reached
