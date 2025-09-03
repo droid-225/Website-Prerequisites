@@ -31,3 +31,7 @@ The middle invisible button was added as basically a shield against the overlay 
 
 Commit 172:
 When giving specific values for max-w-[], also use w-full alongside it to ensure the max width is being used until the specified max is reached
+
+Commit 176:
+The "group" class can be used to connect the child elements to thier parent elements.
+For example here, when the larger div element is hovered over, the h4 tag also reacts in response to the hover.
